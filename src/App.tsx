@@ -1,10 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import Menu from './components/Main'
+import Food from './components/Food'
 
 import './css/index.css'
 import './css/elements.css'
 import { StatusBar, Style } from '@capacitor/status-bar';
-import Scheduling from "./components/Scheduling";
 import {Capacitor} from "@capacitor/core";
 // import serverTexts from "./data/texts"
 
@@ -126,7 +125,7 @@ function App() {
 
     return (
         <div id={'app'} className={'shadow-big'}>
-            <Main/>
+            <Food/>
 
         </div>
     );

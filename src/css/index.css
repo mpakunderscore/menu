@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    /*color: #35a8d8;*/
+    /*color: rgba(20, 137, 181, 0.76);*/
+}
+
+input {
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    outline: none;
+    margin: 0;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    --app-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    height: var(--app-height);
+    overflow: hidden;
+}
+
+@supports (-webkit-touch-callout: none) {
+    body {
+        --app-height: 100dvh;
+    }
+}
+
+
+/*MAIN*/
+
+main {
+    width: 100%;
+    height: var(--app-height);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: ghostwhite;
+}
+
+#app {
+    width: 100%;
+    height: var(--app-height);
+
+    /*background-image: url('../media/background/background1.png');*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% auto;
+    position: relative;
+    /*background-color: #80a8c4;*/
+    overflow: hidden;
+
+    z-index: 2;
+}

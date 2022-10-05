@@ -1,10 +1,9 @@
 import React from 'react';
 import {createRoot} from 'react-dom/client';
 import App from './App';
-import Info from './components/Info';
 import './css/index.css';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import Analytics from "./Analytics";
+// import Analytics from "./Analytics";
 
 // console.log('HEAD: ' + VERSION)
 
