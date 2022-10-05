@@ -96,6 +96,12 @@ main {
     -webkit-appearance: none;
 }
 
+#food {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+}
+
 #food::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
