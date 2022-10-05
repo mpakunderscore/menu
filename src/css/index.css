@@ -90,6 +90,8 @@ main {
 ::-webkit-scrollbar {
     width: 0;
     background: transparent; /* make scrollbar transparent */
+    display: none;
+    -webkit-appearance: none;
 }
 
 #food {
