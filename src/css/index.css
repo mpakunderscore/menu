@@ -82,14 +82,14 @@ main {
     background-size: 100% auto;
     position: relative;
     background-color: ghostwhite;
-    scrollbar-width: none;
     overflow: auto;
 
     z-index: 2;
 }
 
-#app::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent; /* make scrollbar transparent */
 }
 
 #food {
