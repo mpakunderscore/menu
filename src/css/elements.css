@@ -1,3 +1,9 @@
+#food {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 #food img {
     width: 50%;
     max-width: 200px;
