@@ -96,6 +96,6 @@ main {
     -webkit-appearance: none;
 }
 
-#food {
-    /*overflow: scroll;*/
+#food::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
 }
