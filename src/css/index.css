@@ -11,6 +11,8 @@ body {
     -ms-user-select: none; /* Internet Explorer/Edge */
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    background: black;
 }
 
 * {
@@ -103,4 +105,14 @@ main {
     width: 50%;
     max-width: 300px;
     margin: 0;
+}
+
+@media only screen and (min-width: 960px) {
+    main {
+        width: 600px;
+    }
+
+    #app::-webkit-scrollbar {
+        display: none;  /* Safari and Chrome */
+    }
 }
