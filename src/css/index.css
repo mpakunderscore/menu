@@ -97,15 +97,46 @@ main {
 }
 
 #food {
+    position: relative;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-#food > img {
+#food > div {
+    position: relative;
     width: 50%;
     max-width: 300px;
-    margin: 0;
+    overflow: hidden;
+    aspect-ratio: 1;
+}
+
+#food > div > img {
+    width: 100%;
+}
+
+#food > div > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 20px;
+    /*width: 80%;*/
+    margin: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    mix-blend-mode: hard-light;
+    word-wrap: break-word;
+    background: rgba(0, 0, 0, 0.4);
+
+    border-radius: 3px;
+}
+
+#food > div:nth-child(2n) {
+    /*right: 10px;*/
+    text-align: right;
 }
 
 @media only screen and (min-width: 960px) {
