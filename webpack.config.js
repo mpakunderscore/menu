@@ -22,8 +22,6 @@ module.exports = () => {
 
     const plugins = [];
 
-
-
     let now = new Date()
     VERSION = JSON.stringify(process.env.HEROKU_RELEASE_VERSION || 'DEBUG '
             + (now.getDate() + '/' +
@@ -88,7 +86,6 @@ module.exports = () => {
                     exclude: /node_modules/,
                 },
             ],
-
         },
     }
 }

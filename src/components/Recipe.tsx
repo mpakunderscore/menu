@@ -4,15 +4,15 @@ import {recipes} from "../data/recipes";
 
 const Recipe = (props) => {
 
+    let title = props.currentRecipe.name.toUpperCase()
+
     return (
         <div id={'recipe'}>
-            <div className={'title'}>{props.currentRecipe.toUpperCase()}</div>
-            <div className={'text'}>{recipes[props.currentRecipe]}</div>
+            <div className={'title'}>{title}</div>
+            <div className={'text'}></div>
             <div className={'close'} onClick={() => props.setCurrentRecipe(null)}>CLOSE</div>
         </div>
-
     )
-
 }
 
 export default Recipe;

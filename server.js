@@ -19,12 +19,3 @@ require('dotenv').config()
 // google.readGoogleTable().then(r => {})
 
 app.use('/', express.static(path.join(__dirname, 'dist')))
-
-app.get('/dyno', function (request, response) {
-    let heroku = {
-        date: process.env.HEROKU_RELEASE_CREATED_AT,
-        version: process.env.HEROKU_RELEASE_VERSION,
-        commit: process.env.HEROKU_SLUG_COMMIT
-    }
-    response.json(heroku.date ? heroku : {localhost: true})
-})
