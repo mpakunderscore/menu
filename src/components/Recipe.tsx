@@ -1,24 +1,38 @@
-import {items} from "../data/items";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {recipes} from "../data/recipes";
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 const Recipe = (props) => {
 
     let recipe = props.currentRecipe
     let title = recipe.name.toUpperCase()
 
+    let [active, setActive] = useState(false)
+
+    useEffect(() => {
+        setActive(true)
+    }, [])
+
     return (
         <div id={'recipe'}>
             <div className={'image'}>
                 <img title={title} src={'./images/food/' + recipe.image}/>
             </div>
-            <div className={'block'}>
+            <div className={'block ' + (active ? 'active' : '')}>
                 <div className={'title'}>{title}</div>
                 <div className={'text'}>
 
                     <div className={'title-small'}>INGREDIENTS</div>
                     <div className={'ingredients'}>
-                        {props.currentRecipe.ingredients.map((item, i) => {return <div key={i}>{item.name}</div>})}
+                        {props.currentRecipe.ingredients.map((item, i) => {
+                            return <div key={i}>
+                                <div>{capitalizeFirstLetter(item.name)}</div>
+                                <div>{item.quantity}</div>
+                            </div>
+                        })}
                     </div>
 
                     <div className={'title-small'}>INSTRUCTIONS</div>

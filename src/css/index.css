@@ -119,37 +119,49 @@ main {
 
 #food > div > img {
     width: 100%;
+    pointer-events: none;
 }
 
-#food > div > div {
+#food > div > div.title {
     position: absolute;
-    /*top: 0;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
-    /*right: 0;*/
 
     font-size: 20px;
     font-weight: 700;
-    width: calc(100% - 20px);
+    width: 100%;
+    /*height: 100px;*/
+    /*line-height: 100px;*/
+    /*width: calc(100% - 20px);*/
     /*box-sizing: border-box;*/
-    margin: 10px;
+    /*margin: 10px;*/
     padding: 10px;
 
     text-align: center;
     /*line-height: 100%;*/
 
-    color: rgba(255, 255, 255, 0.8);
-    /*color: black;*/
+    color: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.0);
     mix-blend-mode: hard-light;
     word-wrap: break-word;
-    background: rgba(0, 0, 0, 0.5);
 
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
 
-#food > div:nth-child(2n) {
-    /*right: 10px;*/
-    /*text-align: right;*/
+#food > div.hover > div.title {
+    width: 100%;
+    /*height: 100%;*/
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.5);
+    transition: 1s all;
+}
+
+#food > div:hover > div.title {
+    width: 100%;
+    /*height: 100%;*/
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.5);
+    transition: 1s width, 1s color;
 }
 
 #recipe {
@@ -173,7 +185,7 @@ main {
     right: 0;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: 120px;
     flex-shrink: 0;
     overflow: hidden;
     /*z-index: 3;*/
@@ -181,11 +193,14 @@ main {
 
 #recipe .block {
     position: relative;
-    margin-top: 100px;
     background: whitesmoke;
     padding: 20px;
-    /*background: rebeccapurple;*/
     z-index: 2;
+    transition: 1s margin-top;
+}
+
+#recipe .block.active {
+    margin-top: 120px;
 }
 
 #recipe .title {
@@ -207,6 +222,12 @@ main {
     margin-bottom: 10px;
     margin-top: 10px;
     font-weight: 700;
+}
+
+#recipe .ingredients > div {
+    display: flex;
+    justify-content: space-between;
+    line-height: 150%;
 }
 
 #recipe .instructions > div {
