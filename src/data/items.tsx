@@ -16,5 +16,6 @@ export let items = [
     'Gyoza',
     'Shrimps in curry sauce with rice',
     'Cutlets',
-    ''
+    'Rice',
+    'Pureed Mushroom Soup'
 ]

@@ -8,8 +8,10 @@
         "watch": "webpack --watch",
         "build": "NODE_ENV=production webpack --stats-error-details",
         "test": "mocha --require babel-mocha.js",
-        "ios": "npx cap copy ios",
-        "android": "npx cap copy android"
+        "ios sync": "npx cap sync ios",
+        "ios copy": "npx cap copy ios",
+        "android sync": "npx cap sync android",
+        "android copy": "npx cap copy android"
     },
     "author": "mpakunderscore",
     "license": "ISC",

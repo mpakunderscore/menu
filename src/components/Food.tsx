@@ -1,15 +1,19 @@
 import React, {useState, useEffect, useReducer, useRef} from "react";
-import {items} from "./Items";
+import {items} from "../data/items";
+import {inspect} from "util";
 
-const Food = () => {
 
-    let food = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+const Food = (props) => {
+
+    let imagesCount = 22
+    const food = Array.from(Array( imagesCount + 1).keys()).slice(1);
 
     return (
         <div id={'food'}>
             {food.map((name, i) => {
-                return <div>
-                    <div>{items[i]}</div>
+                let itemTitle = items[i]
+                return <div key={i} onClick={() => props.setCurrentRecipe(items[i])}>
+                    <div className={'title'}>{itemTitle ? itemTitle.toUpperCase() : 'NO TITLE'}</div>
                     <img key={i} title={items[i]} src={'./images/food/' + name + '.png'}/>
                 </div>
             })}

@@ -5,6 +5,7 @@ import './css/index.css'
 import './css/elements.css'
 import { StatusBar, Style } from '@capacitor/status-bar';
 import {Capacitor} from "@capacitor/core";
+import Recipe from "./components/Recipe";
 // import serverTexts from "./data/texts"
 
 let uuid = require("uuid");
@@ -123,10 +124,12 @@ function App() {
         initPWA()
     }, [])
 
+    let [currentRecipe, setCurrentRecipe] = useState(false)
+
     return (
         <div id={'app'} className={'shadow-big'}>
-            <Food/>
-
+            <Food setCurrentRecipe={setCurrentRecipe}/>
+            {currentRecipe && <Recipe currentRecipe={currentRecipe} setCurrentRecipe={setCurrentRecipe}/>}
         </div>
     );
 }
