@@ -16,7 +16,14 @@ const Recipe = (props) => {
 
     useEffect(() => {
         setActive(true)
+    }, [])
+
+    useEffect(() => {
     }, [checked])
+
+    let shareList = () => {
+
+    }
 
     return (
         <div id={'recipe'}>
@@ -31,11 +38,11 @@ const Recipe = (props) => {
                     <div className={'ingredients'}>
                         {props.currentRecipe.ingredients.map((item, i) => {
                             return <div key={i}>
+                                <div>{item.quantity}</div>
                                 <div onClick={() => {
                                     checked[i] = !checked[i]
                                     setChecked({...checked})
                                 }}>{capitalizeFirstLetter(item.name)}<span>{checked[i] ? ' ✓' : ''}</span></div>
-                                <div>{item.quantity}</div>
                             </div>
                         })}
                     </div>
@@ -52,7 +59,11 @@ const Recipe = (props) => {
 
                 </div>
             </div>
-            <div className={'close'} onClick={() => props.setCurrentRecipe(null)}>CLOSE</div>
+            <div className={'buttons'}>
+                {Object.keys(checked).length > 0 && <div className={'shop-list'} onClick={() => shareList()}>SHARE</div>}
+                <div className={'close'} onClick={() => props.setCurrentRecipe(null)}>CLOSE</div>
+            </div>
+
         </div>
     )
 }
