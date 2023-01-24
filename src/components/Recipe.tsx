@@ -39,7 +39,8 @@ const Recipe = (props) => {
                         {props.currentRecipe.ingredients.map((item, i) => {
                             return <div key={i}>
                                 <div>{item.quantity}</div>
-                                <div onClick={() => {
+                                <div className={checked[i] ? 'bold' : ''}
+                                    onClick={() => {
                                     checked[i] = !checked[i]
                                     setChecked({...checked})
                                 }}>{capitalizeFirstLetter(item.name)}<span>{checked[i] ? ' ✓' : ''}</span></div>
