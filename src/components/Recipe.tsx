@@ -12,9 +12,11 @@ const Recipe = (props) => {
 
     let [active, setActive] = useState(false)
 
+    let [checked, setChecked] = useState({})
+
     useEffect(() => {
         setActive(true)
-    }, [])
+    }, [checked])
 
     return (
         <div id={'recipe'}>
@@ -29,7 +31,10 @@ const Recipe = (props) => {
                     <div className={'ingredients'}>
                         {props.currentRecipe.ingredients.map((item, i) => {
                             return <div key={i}>
-                                <div>{capitalizeFirstLetter(item.name)}</div>
+                                <div onClick={() => {
+                                    checked[i] = !checked[i]
+                                    setChecked({...checked})
+                                }}>{capitalizeFirstLetter(item.name)}<span>{checked[i] ? ' ✓' : ''}</span></div>
                                 <div>{item.quantity}</div>
                             </div>
                         })}
