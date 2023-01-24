@@ -678,7 +678,7 @@ export const recipes = [
     },
     {
         "name": "Spaghetti Bolognese",
-        "image": '11.png',
+        "image": 'bolognese.png',
         "ingredients": [
             {
                 "name": "spaghetti",

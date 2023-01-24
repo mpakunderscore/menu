@@ -152,7 +152,7 @@ main {
     margin: 0;
     color: rgba(255, 255, 255, 0.8);
     background: rgba(0, 0, 0, 0.5);
-    transition: 1s all;
+    transition: 1s all ease-in;
 }
 
 #food > div:hover > div.title {
@@ -161,7 +161,7 @@ main {
     margin: 0;
     color: rgba(255, 255, 255, 0.8);
     background: rgba(0, 0, 0, 0.5);
-    transition: 1s width, 1s color;
+    transition: 1s all ease-in;
 }
 
 #recipe {
@@ -214,6 +214,12 @@ main {
     margin-bottom: 50px;
 }
 
+#recipe .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #recipe .image img {
     width: 100%;
 }
@@ -227,7 +233,7 @@ main {
 #recipe .ingredients > div {
     display: flex;
     justify-content: space-between;
-    line-height: 150%;
+    line-height: 200%;
 }
 
 #recipe .instructions > div {

@@ -7,6 +7,7 @@ import { StatusBar, Style } from '@capacitor/status-bar';
 import {Capacitor} from "@capacitor/core";
 import Recipe from "./components/Recipe";
 // import serverTexts from "./data/texts"
+import { createGesture, Gesture } from '@ionic/react';
 
 let uuid = require("uuid");
 
@@ -49,6 +50,8 @@ function App() {
 
     let languages = ['eng','rus', 'ukr', 'bel', 'de']
     let [lang, setStateLang] = useState(languages[1])
+
+    let [currentRecipe, setCurrentRecipe] = useState(false)
 
     let langProps = {
         languages,
@@ -102,6 +105,32 @@ function App() {
         deferredPrompt = null;
     }
 
+    const initGestures = () => {
+
+        const gesture = createGesture({
+            el: document.getElementById('app'),
+            threshold: 15,
+            gestureName: 'my-gesture',
+            onMove: ev => onMove(ev)
+        });
+
+        gesture.enable();
+
+        const onMove = (detail) => {
+            const type = detail.type;
+            const currentX = detail.currentX;
+            const deltaX = detail.deltaX;
+            const velocityX = detail.velocityX;
+
+            if (velocityX > 1) {
+                console.log('BACK')
+                setCurrentRecipe(null)
+            }
+
+            // console.log({type, currentX, deltaX, velocityX})
+        }
+    }
+
     let changeScreen = async (i) => {
         setScreen(i)
     }
@@ -122,9 +151,8 @@ function App() {
 
     useEffect(() => {
         initPWA()
+        initGestures()
     }, [])
-
-    let [currentRecipe, setCurrentRecipe] = useState(false)
 
     return (
         <div id={'app'} className={'shadow-big'}>

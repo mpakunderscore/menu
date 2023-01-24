@@ -18,7 +18,7 @@ const Recipe = (props) => {
 
     return (
         <div id={'recipe'}>
-            <div className={'image'}>
+            <div className={'image ' +  + (active ? 'active' : '')}>
                 <img title={title} src={'./images/food/' + recipe.image}/>
             </div>
             <div className={'block ' + (active ? 'active' : '')}>
