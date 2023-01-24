@@ -188,7 +188,7 @@ main {
     height: 200px;
     flex-shrink: 0;
     overflow: hidden;
-    /*z-index: 3;*/
+    z-index: 1;
 }
 
 
@@ -200,6 +200,7 @@ main {
 
 #recipe .image img {
     width: 100%;
+    z-index: 1;
 }
 
 #recipe .block {
