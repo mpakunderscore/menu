@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import Food from './components/Food'
 
 import './css/index.css'
-import './css/elements.css'
 import { StatusBar, Style } from '@capacitor/status-bar';
 import {Capacitor} from "@capacitor/core";
 import Recipe from "./components/Recipe";

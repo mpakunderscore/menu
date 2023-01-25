@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {recipes} from "../data/recipes";
+import '../css/recipe.css'
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -50,7 +50,9 @@ const Recipe = (props) => {
 
                     <div className={'title-small'}>INSTRUCTIONS</div>
                     <div className={'instructions'}>
-                        {props.currentRecipe.instructions.map(item => {return <div key={item}>{item}</div>})}
+                        {props.currentRecipe.instructions.map((item, i) => {
+                            return <div key={item}>{(i + 1) + '. ' + item}</div>
+                        })}
                     </div>
 
                     <div className={'title-small'}>HINTS</div>
@@ -61,7 +63,7 @@ const Recipe = (props) => {
                 </div>
             </div>
             <div className={'buttons'}>
-                {Object.keys(checked).length > 0 && <div className={'shop-list'} onClick={() => shareList()}>SHARE</div>}
+                {Object.keys(checked).length > 0 && <div className={'shop-list'} onClick={() => shareList()}>SAVE</div>}
                 <div className={'close'} onClick={() => props.setCurrentRecipe(null)}>CLOSE</div>
             </div>
 
