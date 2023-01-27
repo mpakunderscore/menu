@@ -15,13 +15,18 @@ const shuffleArray = array => {
     return array
 }
 
-let userRecipes = shuffleArray(recipes)
+// let userRecipes = shuffleArray(recipes)
+let userRecipes = recipes
 
 const Food = (props) => {
 
     return (
         <div>
-            <div id={'food-title'}>AMENU 0.2</div>
+            <div id={'food-title'}>
+                <span>dev</span>
+                AMENU
+                <span>0.3</span>
+            </div>
             <div id={'food'}>
                 {userRecipes.map((name, i) => {
                     let itemTitle = recipes[i] ? recipes[i].name.toUpperCase() : 'NO TITLE'

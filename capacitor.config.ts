@@ -5,7 +5,7 @@ const config: CapacitorConfig = {
   appName: 'menu',
   webDir: 'dist',
   bundledWebRuntime: false,
-  backgroundColor: '#FFFFFF',
+  backgroundColor: '#000',
   plugins: {
     "LocalNotifications": {
       "smallIcon": "ic_stat_logo_favicon",

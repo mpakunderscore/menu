@@ -1,5 +1,78 @@
 export const recipes = [
     {
+        "name": "Apple Pie",
+        "image": '14.png',
+        "ingredients": [
+            {
+                "name": "pie crust",
+                "quantity": "2",
+                "preparation": "store-bought or homemade"
+            },
+            {
+                "name": "apples",
+                "quantity": "6-8",
+                "preparation": "peeled, cored and thinly sliced"
+            },
+            {
+                "name": "sugar",
+                "quantity": "1/2 cup"
+            },
+            {
+                "name": "flour",
+                "quantity": "1/4 cup"
+            },
+            {
+                "name": "lemon juice",
+                "quantity": "1 tbsp"
+            },
+            {
+                "name": "ground cinnamon",
+                "quantity": "1 tsp"
+            },
+            {
+                "name": "nutmeg",
+                "quantity": "1/4 tsp"
+            },
+            {
+                "name": "salt",
+                "quantity": "1/4 tsp"
+            },
+            {
+                "name": "butter",
+                "quantity": "1/4 cup",
+                "preparation": "cold and cut into small pieces"
+            },
+            {
+                "name": "egg wash",
+                "quantity": "1",
+                "preparation": "beaten"
+            },
+            {
+                "name": "sugar",
+                "quantity": "1 tbsp",
+                "preparation": "for sprinkling"
+            }
+        ],
+        "instructions": [
+            "Preheat the oven to 375F (190C).",
+            "In a large bowl, mix together the sliced apples, sugar, flour, lemon juice, cinnamon, nutmeg, and salt.",
+            "Roll out one of the pie crusts and place it in a 9-inch pie dish.",
+            "Fill the pie crust with the apple mixture.",
+            "Dot the top of the apples with butter.",
+            "Roll out the second pie crust and place it on top of the apples.",
+            "Crimp the edges of the pie crust to seal.",
+            "Brush the top of the pie crust with the beaten egg wash and sprinkle with sugar.",
+            "Bake the pie for 45-50 minutes, or until the crust is golden brown and the filling is bubbling."
+        ],
+        "hints": [
+            "You can also add raisins, cranberries, or nuts for more flavor.",
+            "You can also use a mixture of different types of apples for a more complex flavor.",
+            "You can also add a tablespoon of cornstarch to thicken the filling.",
+            "You can also brush the crust with melted butter for a richer crust.",
+            "You can also serve the pie warm with a scoop of ice cream or whipped cream."
+        ]
+    },
+    {
         "name": "Salmon avocado Poke bowl",
         "image": '1.png',
         "ingredients": [
@@ -83,73 +156,6 @@ export const recipes = [
             "If you like your poke bowl spicy, add more jalapeno or some sriracha sauce to the marinade.",
             "If you don't have rice vinegar, you can use apple cider vinegar or white vinegar instead.",
             "For a gluten-free option, use tamari sauce instead of soy sauce."]
-    },
-    {
-        "name": "Chicken baked with potatoes",
-        "image": '2.png',
-        "ingredients": [
-            {
-                "name": "chicken legs and thighs",
-                "quantity": "8 pieces",
-            },
-            {
-                "name": "Potatoes",
-                "quantity": "1.5 lbs",
-                "preparation": "peeled and cubed"
-            },
-            {
-                "name": "Onion",
-                "quantity": "1 medium",
-                "preparation": "diced"
-            },
-            {
-                "name": "Garlic",
-                "quantity": "4 cloves",
-                "preparation": "minced"
-            },
-            {
-                "name": "Olive oil",
-                "quantity": "2 tbsp"
-            },
-            {
-                "name": "Salt",
-                "quantity": "1 tsp"
-            },
-            {
-                "name": "Black pepper",
-                "quantity": "1/2 tsp"
-            },
-            {
-                "name": "Rosemary",
-                "quantity": "1 tsp",
-                "preparation": "chopped"
-            },
-            {
-                "name": "Thyme",
-                "quantity": "1 tsp",
-                "preparation": "chopped"
-            },
-            {
-                "name": "Lemon",
-                "quantity": "1",
-                "preparation": "juiced"
-            }
-        ],
-        "instructions": [
-            "Preheat the oven to 375°F (190°C).",
-            "In a large mixing bowl, combine the potatoes, onion, garlic, olive oil, salt, black pepper, rosemary, thyme, and lemon juice.",
-            "In a large baking dish, place the chicken legs and thighs in a single layer.",
-            "Spoon the potato mixture around the chicken in the baking dish.",
-            "Cover the baking dish with foil and bake for 45 minutes.",
-            "Remove the foil and bake for an additional 25-30 minutes, or until the chicken is cooked through and the potatoes are tender and golden brown.",
-            "Remove from oven, let it cool for 5 minutes before serving."
-        ],
-        "hints": [
-            "You can also add some carrots, celery, or bell peppers to the dish for more vegetables.",
-            "If you like your dish spicy, you can add some red pepper flakes or cayenne pepper to the seasoning.",
-            "If you want a crispier skin on the chicken, you can brush the chicken with melted butter or oil before baking.",
-            "You can use any type of herbs you have on hand, like oregano or parsley instead of rosemary and thyme."
-        ]
     },
     {
         "name": "Ceviche",
@@ -961,76 +967,70 @@ export const recipes = [
         ]
     },
     {
-        "name": "Apple Pie",
-        "image": '14.png',
+        "name": "Chicken baked with potatoes",
+        "image": '2.png',
         "ingredients": [
             {
-                "name": "pie crust",
-                "quantity": "2",
-                "preparation": "store-bought or homemade"
+                "name": "chicken legs and thighs",
+                "quantity": "8 pieces",
             },
             {
-                "name": "apples",
-                "quantity": "6-8",
-                "preparation": "peeled, cored and thinly sliced"
+                "name": "Potatoes",
+                "quantity": "1.5 lbs",
+                "preparation": "peeled and cubed"
             },
             {
-                "name": "sugar",
-                "quantity": "1/2 cup"
+                "name": "Onion",
+                "quantity": "1 medium",
+                "preparation": "diced"
             },
             {
-                "name": "flour",
-                "quantity": "1/4 cup"
+                "name": "Garlic",
+                "quantity": "4 cloves",
+                "preparation": "minced"
             },
             {
-                "name": "lemon juice",
-                "quantity": "1 tbsp"
+                "name": "Olive oil",
+                "quantity": "2 tbsp"
             },
             {
-                "name": "ground cinnamon",
+                "name": "Salt",
                 "quantity": "1 tsp"
             },
             {
-                "name": "nutmeg",
-                "quantity": "1/4 tsp"
+                "name": "Black pepper",
+                "quantity": "1/2 tsp"
             },
             {
-                "name": "salt",
-                "quantity": "1/4 tsp"
+                "name": "Rosemary",
+                "quantity": "1 tsp",
+                "preparation": "chopped"
             },
             {
-                "name": "butter",
-                "quantity": "1/4 cup",
-                "preparation": "cold and cut into small pieces"
+                "name": "Thyme",
+                "quantity": "1 tsp",
+                "preparation": "chopped"
             },
             {
-                "name": "egg wash",
+                "name": "Lemon",
                 "quantity": "1",
-                "preparation": "beaten"
-            },
-            {
-                "name": "sugar",
-                "quantity": "1 tbsp",
-                "preparation": "for sprinkling"
+                "preparation": "juiced"
             }
         ],
         "instructions": [
-            "Preheat the oven to 375F (190C).",
-            "In a large bowl, mix together the sliced apples, sugar, flour, lemon juice, cinnamon, nutmeg, and salt.",
-            "Roll out one of the pie crusts and place it in a 9-inch pie dish.",
-            "Fill the pie crust with the apple mixture.",
-            "Dot the top of the apples with butter.",
-            "Roll out the second pie crust and place it on top of the apples.",
-            "Crimp the edges of the pie crust to seal.",
-            "Brush the top of the pie crust with the beaten egg wash and sprinkle with sugar.",
-            "Bake the pie for 45-50 minutes, or until the crust is golden brown and the filling is bubbling."
+            "Preheat the oven to 375°F (190°C).",
+            "In a large mixing bowl, combine the potatoes, onion, garlic, olive oil, salt, black pepper, rosemary, thyme, and lemon juice.",
+            "In a large baking dish, place the chicken legs and thighs in a single layer.",
+            "Spoon the potato mixture around the chicken in the baking dish.",
+            "Cover the baking dish with foil and bake for 45 minutes.",
+            "Remove the foil and bake for an additional 25-30 minutes, or until the chicken is cooked through and the potatoes are tender and golden brown.",
+            "Remove from oven, let it cool for 5 minutes before serving."
         ],
         "hints": [
-            "You can also add raisins, cranberries, or nuts for more flavor.",
-            "You can also use a mixture of different types of apples for a more complex flavor.",
-            "You can also add a tablespoon of cornstarch to thicken the filling.",
-            "You can also brush the crust with melted butter for a richer crust.",
-            "You can also serve the pie warm with a scoop of ice cream or whipped cream."
+            "You can also add some carrots, celery, or bell peppers to the dish for more vegetables.",
+            "If you like your dish spicy, you can add some red pepper flakes or cayenne pepper to the seasoning.",
+            "If you want a crispier skin on the chicken, you can brush the chicken with melted butter or oil before baking.",
+            "You can use any type of herbs you have on hand, like oregano or parsley instead of rosemary and thyme."
         ]
     },
     {
@@ -1273,7 +1273,6 @@ export const recipes = [
             "You can also serve the cutlets with a sauce such as gravy, ketchup, or mustard."
         ]
     },
-
     {
         "name": 'Rice',
         "image": '18.png',

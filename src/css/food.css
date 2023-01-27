@@ -8,6 +8,13 @@
     font-weight: 700;
 }
 
+#food-title span {
+    font-size: 10px;
+    opacity: .4;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 #food::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
@@ -36,6 +43,7 @@
 #food > div > img {
     width: 100%;
     pointer-events: none;
+    background: black;
 }
 
 #food > div > div.title {

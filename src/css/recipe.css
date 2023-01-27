@@ -50,12 +50,34 @@
 }
 
 #recipe .title {
-    margin-left: auto;
+    position: relative;
+    width: 100%;
+}
+
+#recipe .title .text {
     width: 70%;
+    margin-left: auto;
     font-size: 20px;
     text-align: right;
     margin-bottom: 10px;
     font-weight: 700;
+}
+#recipe .title .buttons {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.material-symbols-outlined {
+    /*background-color: red;*/
+    opacity: .3;
+    line-height: 27px;
+}
+
+.material-symbols-outlined.favorite {
+    opacity: .9;
 }
 
 #recipe .text {

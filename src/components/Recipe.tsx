@@ -25,13 +25,22 @@ const Recipe = (props) => {
 
     }
 
+    let [favorite, setFavorite] = useState(false)
+
     return (
         <div id={'recipe'}>
             <div className={'image ' +  + (active ? 'active' : '')}>
                 <img title={title} src={'./images/food/' + recipe.image}/>
             </div>
             <div className={'block ' + (active ? 'active' : '')}>
-                <div className={'title'}>{title}</div>
+                <div className={'title'}>
+                    <div className={'text'}>
+                    {title}
+                    </div>
+                    <div className={'buttons'}>
+                        <span onClick={() => setFavorite(!favorite)} className={"material-symbols-outlined" + (favorite ? ' favorite' : '')}>favorite</span>
+                    </div>
+                </div>
                 <div className={'text'}>
 
                     <div className={'title-small'}>INGREDIENTS</div>
