@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import '../../css/recipe.css'
 import RecipeText from "./RecipeText";
+import {names} from "../../utils/names";
 
 const Recipe = (props) => {
 
@@ -22,6 +23,11 @@ const Recipe = (props) => {
 
     }
 
+    let saveFavorites = () => {
+        console.log()
+        setFavorite(!favorite)
+    }
+
     let [favorite, setFavorite] = useState(false)
 
     return (
@@ -35,7 +41,7 @@ const Recipe = (props) => {
                     {title}
                     </div>
                     <div className={'buttons'}>
-                        <span onClick={() => setFavorite(!favorite)} className={"material-symbols-outlined" + (favorite ? ' favorite' : '')}>favorite</span>
+                        <span onClick={() => saveFavorites()} className={"material-symbols-outlined" + (favorite ? ' favorite' : '')}>favorite</span>
                     </div>
                 </div>
                 <RecipeText currentRecipe={recipe}/>

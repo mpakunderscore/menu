@@ -17,10 +17,28 @@ const RecipeText = (props) => {
 
     let [checked, setChecked] = useState({})
 
-    let updateInstructions = (text) => {
-        // text = text.replace('minutes', '⏱️ minutes')
-        // text = text.replace('hours', '⏱️ hours')
-        return <div>{text}</div>
+    let runTimer = (minutes) => {
+        console.log(minutes)
+
+    }
+
+    let updateInstructions = (text, i) => {
+        text = text.replaceAll('minutes', '⏱️ minutes')
+        text = text.replaceAll('hours', '⏱️ hours')
+
+        let isTimer = false
+        let minutes = '0'
+        if (text.includes('⏱')) {
+            isTimer = true
+            const left = text.split('⏱')
+            minutes = left[0].split(' ')[left[0].split(' ').length - 2]
+            if (minutes.includes('-'))
+                minutes = minutes.split('-')[1]
+        }
+
+        return <div onClick={isTimer ? () => runTimer(minutes) : null}>{(i + 1) + '. ' +
+            text
+        }</div>
     }
 
     let clickInstruction = () => {
@@ -48,8 +66,7 @@ const RecipeText = (props) => {
             <div className={'instructions'}>
                 {props.currentRecipe.instructions.map((item, i) => {
                     return <div key={item} onClick={() => clickInstruction()}>{
-                        (i + 1) + '. ' +
-                        updateInstructions(item)
+                        updateInstructions(item, i)
                     }</div>
                 })}
             </div>
