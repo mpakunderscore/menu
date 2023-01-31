@@ -8,12 +8,16 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 // console.log('HEAD: ' + VERSION)
 
 const root = createRoot(document.getElementById('root'))
+// root.render(
+//     <React.StrictMode>
+//         <App/>
+//         {/*<Info/>*/}
+//         {/*<Analytics/>*/}
+//     </React.StrictMode>
+// )
+
 root.render(
-    <React.StrictMode>
-        <App/>
-        {/*<Info/>*/}
-        {/*<Analytics/>*/}
-    </React.StrictMode>
+    <App/>
 )
 
 // If you want your app to work offline and load faster, you can change

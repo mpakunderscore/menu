@@ -4,7 +4,7 @@ import Food from './components/Food'
 import './css/index.css'
 import { StatusBar, Style } from '@capacitor/status-bar';
 import {Capacitor} from "@capacitor/core";
-import Recipe from "./components/Recipe";
+import Recipe from "./components/recipe/Recipe";
 // import serverTexts from "./data/texts"
 import { createGesture, Gesture } from '@ionic/react';
 

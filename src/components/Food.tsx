@@ -3,6 +3,7 @@ import React, {useState, useEffect, useReducer, useRef} from "react";
 import {inspect} from "util";
 import {recipes} from "../data/recipes";
 import '../css/food.css'
+import Header from "./Header";
 
 const shuffleArray = array => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -15,18 +16,20 @@ const shuffleArray = array => {
     return array
 }
 
-// let userRecipes = shuffleArray(recipes)
-let userRecipes = recipes
-
 const Food = (props) => {
+
+    let [userRecipes, setUserRecipes] = useState([])
+
+    useEffect(() => {
+        // let userRecipes = shuffleArray(recipes)
+        let userRecipes = recipes
+        // userRecipes.unshift({name: 'FAVORITES', image: '', ingredients: [], instructions: [], hints: []})
+        setUserRecipes(userRecipes)
+    }, [])
 
     return (
         <div>
-            <div id={'food-title'}>
-                <span>dev</span>
-                AMENU
-                <span>0.3</span>
-            </div>
+            <Header/>
             <div id={'food'}>
                 {userRecipes.map((name, i) => {
                     let itemTitle = recipes[i] ? recipes[i].name.toUpperCase() : 'NO TITLE'

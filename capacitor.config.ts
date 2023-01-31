@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'space.mpak.menu',
+  appId: 'space.mpak.amenu',
   appName: 'menu',
   webDir: 'dist',
   bundledWebRuntime: false,

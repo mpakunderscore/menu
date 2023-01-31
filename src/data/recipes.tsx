@@ -73,6 +73,65 @@ export const recipes = [
         ]
     },
     {
+        "name": "Puff Pastry Tangerines",
+        "image": 'tangerines.png',
+        "servings": 8,
+        "prep_time": "20 minutes",
+        "cook_time": "20 minutes",
+        "ingredients": [
+            {
+                "name": "Puff Pastry",
+                "quantity": "1 sheet"
+            },
+            {
+                "name": "Tangerines",
+                "quantity": 4,
+            },
+            {
+                "name": "Sugar",
+                "quantity": "3 tablespoons",
+            },
+            {
+                "name": "Butter",
+                "quantity": 2,
+                "unit": "tablespoons"
+            },
+            {
+                "name": "Ground cinnamon",
+                "quantity": 1,
+                "unit": "teaspoon"
+            },
+            {
+                "name": "Egg",
+                "quantity": 1,
+                "unit": ""
+            },
+            {
+                "name": "Powdered sugar",
+                "quantity": 3,
+                "unit": "tablespoons"
+            }
+        ],
+        "instructions": [
+            "Preheat oven to 400°F (200°C)",
+            "Peel and slice tangerines into thin rounds.",
+            "Melt butter in a pan over medium heat. Add tangerine slices and sugar, cook for 2-3 minutes until the sugar dissolves.",
+            "Add cinnamon and stir.",
+            "Roll out the puff pastry on a lightly floured surface.",
+            "Cut the pastry into 8 equal squares.",
+            "Place a spoonful of the tangerine mixture onto each square.",
+            "Brush the edges with beaten egg.",
+            "Fold each square into a triangle and press the edges to seal.",
+            "Bake for 20 minutes or until golden brown.",
+            "Sprinkle with powdered sugar before serving."
+        ],
+        "hints": [
+            "For a crispier pastry, you can prick the surface of the pastry with a fork before baking.",
+            "You can also add a splash of orange juice to the tangerine mixture for extra flavor.",
+            "Serve warm for best results."
+        ]
+    },
+    {
         "name": "Salmon avocado Poke bowl",
         "image": '1.png',
         "ingredients": [
