@@ -7,6 +7,7 @@ import {Capacitor} from "@capacitor/core";
 import Recipe from "./components/recipe/Recipe";
 // import serverTexts from "./data/texts"
 import { createGesture, Gesture } from '@ionic/react';
+import Header from "./components/Header";
 
 let uuid = require("uuid");
 
@@ -74,35 +75,35 @@ function App() {
         standalone = true
     }
 
-    let initPWA = () => {
-
-        // console.log('initPWA')
-
-        window.addEventListener('beforeinstallprompt', (e) => {
-
-            // console.log('beforeinstallprompt')
-            // Prevent the mini-infobar from appearing on mobile
-            e.preventDefault();
-            // Stash the event so it can be triggered later.
-            deferredPrompt = e;
-            setDeferredPrompt(e)
-            // Update UI notify the user they can install the PWA
-            // showInstallPromotion();
-            // Optionally, send analytics event that PWA install promo was shown.
-            // console.log(`'beforeinstallprompt' event was fired.`);
-        });
-    }
-
-    let installPWA = async () => {
-
-        deferredPrompt.prompt();
-        // Wait for the user to respond to the prompt
-        const {outcome} = await deferredPrompt.userChoice;
-        // Optionally, send analytics event with outcome of user choice
-        console.log(`User response to the install prompt: ${outcome}`);
-        // We've used the prompt, and can't use it again, throw it away
-        deferredPrompt = null;
-    }
+    // let initPWA = () => {
+    //
+    //     // console.log('initPWA')
+    //
+    //     window.addEventListener('beforeinstallprompt', (e) => {
+    //
+    //         // console.log('beforeinstallprompt')
+    //         // Prevent the mini-infobar from appearing on mobile
+    //         e.preventDefault();
+    //         // Stash the event so it can be triggered later.
+    //         deferredPrompt = e;
+    //         setDeferredPrompt(e)
+    //         // Update UI notify the user they can install the PWA
+    //         // showInstallPromotion();
+    //         // Optionally, send analytics event that PWA install promo was shown.
+    //         // console.log(`'beforeinstallprompt' event was fired.`);
+    //     });
+    // }
+    //
+    // let installPWA = async () => {
+    //
+    //     deferredPrompt.prompt();
+    //     // Wait for the user to respond to the prompt
+    //     const {outcome} = await deferredPrompt.userChoice;
+    //     // Optionally, send analytics event with outcome of user choice
+    //     console.log(`User response to the install prompt: ${outcome}`);
+    //     // We've used the prompt, and can't use it again, throw it away
+    //     deferredPrompt = null;
+    // }
 
     const initGestures = () => {
 
@@ -149,12 +150,13 @@ function App() {
     // let appInitKey
 
     useEffect(() => {
-        initPWA()
+        // initPWA()
         initGestures()
     }, [])
 
     return (
         <div id={'app'} className={'shadow-big'}>
+            <Header/>
             <Food setCurrentRecipe={setCurrentRecipe}/>
             {currentRecipe && <Recipe currentRecipe={currentRecipe} setCurrentRecipe={setCurrentRecipe}/>}
         </div>

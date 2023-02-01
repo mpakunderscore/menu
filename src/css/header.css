@@ -1,4 +1,8 @@
-#food-title {
+#header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+
     height: 50px;
     line-height: 50px;
     background: black;
@@ -8,15 +12,17 @@
     font-weight: 700;
 
     transition: all 1s ease-out;
+    z-index: 2;
+    opacity: .1;
 }
 
-#food-title span {
+#header span {
     font-size: 10px;
     opacity: .4;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-#food-title.menu-open {
-    height: 100px;
+#header.open {
+    opacity: .9;
 }

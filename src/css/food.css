@@ -5,6 +5,8 @@
 #food {
     position: relative;
     width: 100%;
+    padding-top: 50px;
+    background: black;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
