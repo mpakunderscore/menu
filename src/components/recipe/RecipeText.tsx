@@ -10,22 +10,23 @@ function capitalizeFirstLetter(string) {
 
 const RecipeText = (props) => {
 
-    // let [userRecipes, setUserRecipes] = useState([])
-    let [menuState, setMenuState] = useState(0)
-
-    useEffect(() => {
-    }, [])
-
     let [checked, setChecked] = useState({})
 
     let [isTimer, setIsTimer] = useState(false)
     let [timerMinutes, setTimerMinutes] = useState(0)
+
+    useEffect(() => {
+    }, [])
 
     let runTimer = (i, minutes) => {
         console.log(minutes)
         setIsTimer(i)
         setTimerMinutes(minutes)
         // initTimer()
+    }
+
+    let closeTimer = () => {
+        setIsTimer(false)
     }
 
     let updateInstructions = (text, i) => {
@@ -44,9 +45,9 @@ const RecipeText = (props) => {
                 minutes = minutes.split('-')[1]
         }
 
-        return <div onClick={isHereTimer ? () => runTimer(i, minutes) : null}>
-            {(i + 1) + '. ' + text}
-            {isHereTimer ? isTimer === i && <RecipeTimer timerMinutes={timerMinutes} setIsTimer={setIsTimer}/> : ''}
+        return <div>
+            <div onClick={isHereTimer ? () => runTimer(i, minutes) : null}>{(i + 1) + '. ' + text}</div>
+            {isHereTimer ? isTimer === i && <RecipeTimer timerMinutes={timerMinutes} closeTimer={closeTimer}/> : ''}
         </div>
     }
 

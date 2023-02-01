@@ -45,7 +45,7 @@ const RecipeTimer = (props) => {
 
     return (
         <div className={'timer'}>
-            <span onClick={() => {props.setIsTimer(false)}}
+            <span onClick={() => props.closeTimer(false)}
                   className={"material-symbols-outlined"}>close</span>
             <div>{timerString}</div>
             <span onClick={() => {
