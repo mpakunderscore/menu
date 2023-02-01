@@ -21,9 +21,9 @@ const RecipeText = (props) => {
     let [isTimer, setIsTimer] = useState(false)
     let [timerMinutes, setTimerMinutes] = useState(0)
 
-    let runTimer = (minutes) => {
+    let runTimer = (i, minutes) => {
         console.log(minutes)
-        setIsTimer(true)
+        setIsTimer(i)
         setTimerMinutes(minutes)
         // initTimer()
     }
@@ -34,19 +34,20 @@ const RecipeText = (props) => {
         // text = text.replaceAll('hour ', '⏱️ hour ')
         // text = text.replaceAll('hours', '⏱️ hours')
 
-        let isTimer = false
+        let isHereTimer = false
         let minutes = '0'
         if (text.includes('⏱')) {
-            isTimer = true
+            isHereTimer = true
             const left = text.split('⏱')
             minutes = left[0].split(' ')[left[0].split(' ').length - 2]
             if (minutes.includes('-'))
                 minutes = minutes.split('-')[1]
         }
 
-        return <div onClick={isTimer ? () => runTimer(minutes) : null}>{(i + 1) + '. ' +
-            text
-        }</div>
+        return <div onClick={isHereTimer ? () => runTimer(i, minutes) : null}>
+            {(i + 1) + '. ' + text}
+            {isHereTimer ? isTimer === i && <RecipeTimer timerMinutes={timerMinutes} setIsTimer={setIsTimer}/> : ''}
+        </div>
     }
 
     let clickInstruction = () => {}
@@ -76,8 +77,6 @@ const RecipeText = (props) => {
                     }</div>
                 })}
             </div>
-
-            {isTimer && <RecipeTimer timerMinutes={timerMinutes} setIsTimer={setIsTimer}/>}
 
             <div className={'title-small'}>HINTS</div>
             <div className={'hints'}>

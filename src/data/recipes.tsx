@@ -117,7 +117,7 @@ export const recipes = [
         "instructions": [
             "Preheat oven to 400°F (200°C)",
             "Peel and slice tangerines into thin rounds.",
-            "Melt butter in a pan over medium heat. Add tangerine slices and sugar, cook for 2-3 minutes until the sugar dissolves.",
+            "Melt butter in a pan over medium heat. Add tangerine slices and sugar, cook for 1-1 minutes until the sugar dissolves.",
             "Add cinnamon and stir.",
             "Roll out the puff pastry on a lightly floured surface.",
             "Cut the pastry into 8 equal squares.",

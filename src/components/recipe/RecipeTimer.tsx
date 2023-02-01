@@ -16,18 +16,19 @@ const RecipeTimer = (props) => {
     let [seconds, setSeconds] = useState(props.timerMinutes * 60)
     let [timerString, setTimerString] = useState(setString(props.timerMinutes * 60))
 
-    let reloadTimer = useRef(null)
+    let currentTimer = useRef(null)
 
     let initTimer = () => {
-        clearInterval(reloadTimer.current)
-        reloadTimer.current = setInterval(() => {
+        clearInterval(currentTimer.current)
+        currentTimer.current = setInterval(() => {
             seconds = seconds - 1
             setSeconds(seconds)
             console.log(seconds)
             setTimerString(setString(seconds))
 
-            if (seconds === 0) {
-                clearInterval(reloadTimer.current)
+            if (seconds <= 0) {
+                console.log('CANCEL')
+                clearInterval(currentTimer.current)
             }
 
         }, 1000)
@@ -38,9 +39,9 @@ const RecipeTimer = (props) => {
     useEffect(() => {
         initTimer()
         return () => {
-            clearInterval(reloadTimer.current)
+            clearInterval(currentTimer.current)
         }
-    }, [seconds])
+    }, [])
 
     return (
         <div className={'timer'}>
