@@ -42,7 +42,8 @@ const Recipe = (props) => {
                     {title}
                     </div>
                     <div className={'buttons'}>
-                        <span onClick={() => saveFavorites()} className={"material-symbols-outlined" + (favorite ? ' favorite' : '')}>favorite</span>
+                        <span onClick={() => saveFavorites()}
+                              className={"material-symbols-outlined" + (favorite ? ' favorite' : '')}>favorite</span>
                     </div>
                 </div>
                 <RecipeText currentRecipe={recipe}/>

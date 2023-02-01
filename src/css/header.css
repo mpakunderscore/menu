@@ -26,3 +26,7 @@
 #header.open {
     opacity: .9;
 }
+
+#header.buttons {
+    height: 100px;
+}

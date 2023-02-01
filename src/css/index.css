@@ -80,11 +80,11 @@ main {
     height: var(--app-height);
 
     /*background-image: url('../media/background/background1.png');*/
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% auto;
-    position: relative;
-    background-color: ghostwhite;
+    /*background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    /*background-size: 100% auto;*/
+    /*position: relative;*/
+    /*background-color: ghostwhite;*/
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll;
@@ -95,6 +95,29 @@ main {
 @media only screen and (min-width: 960px) {
     main {
         width: 900px;
+        overflow: hidden;
+    }
+
+    #recipe {
+        max-width: 600px;
+        margin: auto;
+        /*overflow: hidden;*/
+        overflow-y: auto !important;
+        scrollbar-width: none;
+    }
+
+    #recipe::-webkit-scrollbar {
+        display: none;  /* Safari and Chrome */
+    }
+
+    #recipe .image {
+        position: relative !important;
+        height: auto !important;
+        /*opacity: 0;*/
+    }
+
+    #recipe .block.active {
+        margin-top: 0 !important;
     }
 
     #app::-webkit-scrollbar {

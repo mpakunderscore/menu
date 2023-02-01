@@ -14,12 +14,10 @@ const Header = (props) => {
 
     const controlDirection = () => {
         let height = document.querySelector('#app').scrollTop
-        console.log(height)
         if (oldScroll > height) {
-            console.log(oldScroll)
             setMenuState(1)
         } else {
-            setMenuState(2)
+            setMenuState(0)
         }
         setOldScroll(height)
     }

@@ -2,6 +2,7 @@ import React, {useState, useEffect, useReducer, useRef} from "react";
 // import {items} from "../data/items";
 import {inspect} from "util";
 import '../../css/recipe.css'
+import RecipeTimer from "./RecipeTimer";
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -17,13 +18,20 @@ const RecipeText = (props) => {
 
     let [checked, setChecked] = useState({})
 
+    let [isTimer, setIsTimer] = useState(false)
+    let [timerMinutes, setTimerMinutes] = useState(0)
+
     let runTimer = (minutes) => {
         console.log(minutes)
-
+        setIsTimer(true)
+        setTimerMinutes(minutes)
+        // initTimer()
     }
 
     let updateInstructions = (text, i) => {
+        text = text.replaceAll('minute ', '⏱️ minute ')
         text = text.replaceAll('minutes', '⏱️ minutes')
+        text = text.replaceAll('hour ', '⏱️ hour ')
         text = text.replaceAll('hours', '⏱️ hours')
 
         let isTimer = false
@@ -41,9 +49,7 @@ const RecipeText = (props) => {
         }</div>
     }
 
-    let clickInstruction = () => {
-
-    }
+    let clickInstruction = () => {}
 
     return (
         <div className={'text'}>
@@ -70,6 +76,8 @@ const RecipeText = (props) => {
                     }</div>
                 })}
             </div>
+
+            {isTimer && <RecipeTimer timerMinutes={timerMinutes} setIsTimer={setIsTimer}/>}
 
             <div className={'title-small'}>HINTS</div>
             <div className={'hints'}>
