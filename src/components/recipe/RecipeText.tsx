@@ -31,8 +31,8 @@ const RecipeText = (props) => {
     let updateInstructions = (text, i) => {
         text = text.replaceAll('minute ', '⏱️ minute ')
         text = text.replaceAll('minutes', '⏱️ minutes')
-        text = text.replaceAll('hour ', '⏱️ hour ')
-        text = text.replaceAll('hours', '⏱️ hours')
+        // text = text.replaceAll('hour ', '⏱️ hour ')
+        // text = text.replaceAll('hours', '⏱️ hours')
 
         let isTimer = false
         let minutes = '0'
