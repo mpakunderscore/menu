@@ -14,7 +14,7 @@ const Header = (props) => {
 
     let clickMenu = () => {
         console.log('click menu')
-        setMenuState(1)
+        // setMenuState(1)
     }
 
     return (

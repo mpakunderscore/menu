@@ -1,5 +1,6 @@
 export const recipes = [
     {
+        "id": "0",
         "name": "Apple Pie",
         "image": '14.png',
         "ingredients": [
@@ -73,6 +74,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "1",
         "name": "Puff Pastry Tangerines",
         "image": 'tangerines.png',
         "servings": 8,
@@ -132,6 +134,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "2",
         "name": "Salmon avocado Poke bowl",
         "image": '1.png',
         "ingredients": [
@@ -217,6 +220,7 @@ export const recipes = [
             "For a gluten-free option, use tamari sauce instead of soy sauce."]
     },
     {
+        "id": "3",
         "name": "Ceviche",
         "image": '3.png',
         "ingredients": [
@@ -286,6 +290,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "4",
         "name": "Tom Yum",
         "image": '4.png',
         "ingredients": [
@@ -353,6 +358,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "5",
         "name": "Tomato Soup",
         "image": '5.png',
         "ingredients": [
@@ -416,6 +422,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "6",
         "name": "Chicken in Sweet and Sour Sauce",
         "image": '6.png',
         "ingredients": [
@@ -507,6 +514,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "7",
         "name": "Lemonade",
         "image": '7.png',
         "ingredients": [
@@ -551,6 +559,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "8",
         "name": "Creamy Cucumber and Tomato Salad",
         "image": '8.png',
         "ingredients": [
@@ -616,6 +625,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "9",
         "name": "Spring Rolls",
         "image": '9.png',
         "ingredients": [
@@ -683,6 +693,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "10",
         "name": "Bruschetta",
         "image": '10.png',
         "ingredients": [
@@ -742,6 +753,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "11",
         "name": "Spaghetti Bolognese",
         "image": 'bolognese.png',
         "ingredients": [
@@ -835,6 +847,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "12",
         "name": "Borscht Soup",
         "image": '12.png',
         "ingredients": [
@@ -917,6 +930,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "13",
         "name": "Ramen",
         "image": '13.png',
         "ingredients": [
@@ -1026,6 +1040,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "14",
         "name": "Chicken baked with potatoes",
         "image": '2.png',
         "ingredients": [
@@ -1093,6 +1108,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "15",
         "name": "Gyoza",
         "image": '15.png',
         "ingredients": [
@@ -1179,6 +1195,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "16",
         "name": "Shrimp in Curry Sauce with Rice",
         "image": '16.png',
         "ingredients": [
@@ -1261,6 +1278,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "17",
         "name": "Cutlets",
         "image": '17.png',
         "ingredients": [
@@ -1333,6 +1351,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "18",
         "name": 'Rice',
         "image": '18.png',
         "ingredients": [
@@ -1373,6 +1392,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "19",
         "name": "Pureed Mushroom Soup",
         "image": '19.png',
         "ingredients": [
@@ -1436,6 +1456,7 @@ export const recipes = [
         ]
     },
     {
+        "id": "20",
         "name": "Mac and Cheese",
         "image": '20.png',
         "ingredients": [

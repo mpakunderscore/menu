@@ -1,9 +1,19 @@
 import {names} from "./names";
 
-export let setItem = (name, item) => {
+const setItem = (name, item) => {
     localStorage.setItem(name, JSON.stringify(item))
 }
 
-export let getItem = (name) => {
-    JSON.parse(localStorage.getItem(name))
+const getItem = (name) => {
+    return JSON.parse(localStorage.getItem(name) || '{}')
+}
+
+export let setFavorites = (id, value) => {
+    let favorites = getItem(names.FAVORITES)
+    favorites[id] = value
+    setItem(names.FAVORITES, {...favorites})
+}
+
+export let getFavorite = (id) => {
+    return getItem(names.FAVORITES)[id]
 }

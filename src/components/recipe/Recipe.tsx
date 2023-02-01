@@ -2,14 +2,16 @@ import React, {useEffect, useState} from "react";
 import '../../css/recipe.css'
 import RecipeText from "./RecipeText";
 import {names} from "../../utils/names";
+import {getFavorite, setFavorites} from "../../utils/storage";
 
 const Recipe = (props) => {
 
     let recipe = props.currentRecipe
     let title = recipe.name.toUpperCase()
 
-    let [active, setActive] = useState(false)
+    let [favorite, setFavorite] = useState(getFavorite(recipe.id))
 
+    let [active, setActive] = useState(false)
     let [checked, setChecked] = useState({})
 
     useEffect(() => {
@@ -26,9 +28,8 @@ const Recipe = (props) => {
     let saveFavorites = () => {
         console.log()
         setFavorite(!favorite)
+        setFavorites(recipe.id, !favorite)
     }
-
-    let [favorite, setFavorite] = useState(false)
 
     return (
         <div id={'recipe'}>
