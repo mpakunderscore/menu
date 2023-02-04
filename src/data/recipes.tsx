@@ -70,8 +70,13 @@ export const recipes = [
             "You can also use a mixture of different types of apples for a more complex flavor.",
             "You can also add a tablespoon of cornstarch to thicken the filling.",
             "You can also brush the crust with melted butter for a richer crust.",
-            "You can also serve the pie warm with a scoop of ice cream or whipped cream."
-        ]
+            "You can also serve the pie warm with a scoop of ice cream or whipped cream.",
+            "For a flakier crust, use cold butter and ice water when making the dough.",
+            "For a crispier crust, bake the pie on the lower shelf of the oven.",
+            "For a sweeter pie, add more brown sugar to the filling.",
+            "For a spicier pie, add more cinnamon or nutmeg to the filling."
+        ],
+        "story": "Apple pie is a classic dessert that has been enjoyed for generations. It's the perfect combination of sweet, juicy apples and a flaky, buttery crust. This recipe has been passed down from my grandmother and is sure to bring a smile to your face with every bite. Whether you serve it warm with a scoop of vanilla ice cream or cold with a cup of coffee, this pie is sure to become afamily favorite. So, gather your ingredients, preheat the oven, and let's get baking! In no time, the irresistible aroma of apples and cinnamon will fill your kitchen, and you'll be able to share a slice of this delicious pie with your loved ones. It's the perfect dessert for holidays, special occasions, or just a cozy night in. So, go ahead, give this recipe a try, and enjoy a slice of sweet and comforting apple pie!"
     },
     {
         "id": "1",
@@ -1371,7 +1376,7 @@ export const recipes = [
             {
                 "name": "butter",
                 "quantity": "1 tbsp",
-                "preparation":"optional"
+                "preparation": "optional"
             }
         ],
         "instructions": [
@@ -1383,7 +1388,7 @@ export const recipes = [
             "Remove the pan from the heat and let the rice sit, covered, for an additional 5-10 minutes.",
             "Fluff the rice with a fork and serve."
         ],
-        "hints":[
+        "hints": [
             "You can also use brown rice, wild rice or basmati rice instead of white rice.",
             "You can also add some herbs, spices, or vegetables to the rice for added flavor.",
             "You can also replace some of the water with chicken, beef or vegetable stock for added flavor.",
@@ -1493,12 +1498,12 @@ export const recipes = [
             {
                 "name": "bread crumbs",
                 "quantity": "1/4 cup",
-                "preparation":"optional"
+                "preparation": "optional"
             },
             {
                 "name": "parsley",
                 "quantity": "1/4 cup",
-                "preparation":"chopped, optional"
+                "preparation": "chopped, optional"
             }
         ],
         "instructions": [
@@ -1510,12 +1515,678 @@ export const recipes = [
             "Add the cooked macaroni to the cheese sauce and stir until well combined.",
             "If desired, top with breadcrumbs and parsley before serving."
         ],
-        "hints":[
+        "hints": [
             "You can also add some diced bacon, diced ham, or diced chicken for added protein.",
             "You can also add some diced vegetables such as broccoli, cauliflower, or bell peppers for added nutrition.",
             "You can also use different types of cheese such as gouda, monterey jack, or mozzarella for added flavor.",
             "You can also add some hot sauce or mustard for added flavor.",
             "You can also bake in the oven at 350F (175C) for 15-20 minutes for a crispy top."
         ]
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '1_Pasta_with_marinara_sauce.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '10_Roasted_vegetables.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '11_Stir-fry.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '12_Caesar_salad.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '13_Omelette_breakfast_sunshine_photography.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '14_Grilled_chicken.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '15_Sausage_and_peppers.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '16_Fried_chicken.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '17_Shepherds_pie.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '18_Crockpot_chili.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '19_Baked_ziti.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '20_Slow_cooker_pulled_pork.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '21_Beef_and_broccoli_stir-fryf.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '22_Fried_rice_with_bacon_and_egg.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '23_Shrimp_scampi.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '24_Baked_potatoes.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '25_Baked_sweet_potatoes.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '26_Fried_egg_sandwich.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '27_Chicken_alfredo.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '28_Meatball_subs.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '29_BBQ_pulled_pork.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '2_Grilled_cheese_sandwich.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '30_Fried_chicken_and_waffles.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '31_Creamy_tomato_soup.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '32_Grilled_chicken_Caesar.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '33_Chicken_Parmesan_meatballs.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '34_Pesto_pasta.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '35_Baked_salmon_with_lemon_and_herbs.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '36_Grilled_chicken_fajitas.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '37_Fried_rice_with_vegetables.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '38_Bacon_and_egg_breakfast_burrito.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '39_Creamy_mushroom_and_chicken_pasta.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '3_Scrambled_eggs.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '40_Grilled_steak_with_chimichurri.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '41_Baked_chicken_and_vegetables.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '42_Creamy_garlic_shrimp.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '43_Lemon_herb_grilled_chicken.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '44_Lemon_chicken_piccata.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '45_BBQ_chicken_pizza.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '46_Grilled_vegetable_quesadilla.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '47_Crispy_chicken_tenders.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '48_Spicy_black_bean_and_corn_tacos.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '49_Beef_and_broccoli_stir-fry.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '4_Baked_salmon.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '50_chicken_pot_pie.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '51_Creamy_pesto_chicken.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '52_photo_of_chili_con_carne_meal.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '53_Grilled_shrimp_skewers.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '54_Creamy_basil_and_tomato_pasta.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '55_vegetable_soup.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '56_Chicken_noodle_soup.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '57_pizza_dough.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '58_Grilled_pork_chops.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '59_minestrone_soup.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '5_Tacos.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '60_potato_salad.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '61_coleslaw.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '62_BBQ_sauce.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '63_Hummus.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '64_Guacamole.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '65_Salsa.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '66_macaroni_salad.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '67_tzatziki_sauce.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '68_ranch_dressing.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '69_Vinaigrette_dressingc.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '6_Fried_rice.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '70_Caesar_dressing.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '71_Thousand_island_dressing.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '72_stuffed_bell_peppers.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '73_Сhicken_and_dumplings.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '74_Сhicken_and_vegetable_curry.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '75_chicken_tikka_masala.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '76_Сhicken_and_rice_casserole.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '77_Сhicken_and_mushroom_stroganoff.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '78_Сhicken and broccoli alfredo.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '79_Сhicken_and_black_bean_enchiladas.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '7_Chicken_Parmesan.jpg',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '80_Сhicken_and_vegetable_stir-fry.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '81_Сhicken_and_vegetable_pot_pie.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '82_Сhicken and vegetable soup.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '83_Сhicken and vegetable quesadillas.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '8_Chili.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
+    },
+    {
+        "id": "0",
+        "name": "Apple Pie",
+        "image": '9_Meatloaf.png',
+        "ingredients": [],
+        "instructions": [],
+        "hints": []
     }
+
 ]

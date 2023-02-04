@@ -23,11 +23,11 @@ const RecipeTimer = (props) => {
         currentTimer.current = setInterval(() => {
             seconds = seconds - 1
             setSeconds(seconds)
-            console.log(seconds)
+            // console.log(seconds)
             setTimerString(setString(seconds))
 
             if (seconds <= 0) {
-                console.log('CANCEL')
+                // console.log('CANCEL')
                 clearInterval(currentTimer.current)
             }
 

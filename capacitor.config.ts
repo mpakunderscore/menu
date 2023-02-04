@@ -1,7 +1,7 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'space.mpak.amenu',
+  appId: 'com.enoria.amenu',
   appName: 'menu',
   webDir: 'dist',
   bundledWebRuntime: false,

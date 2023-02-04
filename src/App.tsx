@@ -53,6 +53,11 @@ function App() {
 
     let [currentRecipe, setCurrentRecipe] = useState(false)
 
+    // setCurrentRecipe = (recipe) => {
+    //     setCurrentRecipe(recipe)
+    //     console.log(recipe)
+    // }
+
     let langProps = {
         languages,
         lang,

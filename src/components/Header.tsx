@@ -4,6 +4,9 @@ import {inspect} from "util";
 import {recipes} from "../data/recipes";
 import '../css/header.css'
 
+const VERSION = '0.4.0'
+let action = 'FILTER'
+
 const Header = (props) => {
 
     // let [userRecipes, setUserRecipes] = useState([])
@@ -36,9 +39,9 @@ const Header = (props) => {
 
     return (
         <div id={'header'} className={(menuState === 1 ? 'open' : '')} onClick={() => clickMenu()}>
-            <span>SORT</span>
+            <span>{action}</span>
             AMENU
-            <span>0.3.3</span>
+            <span>{VERSION}</span>
         </div>
     )
 }

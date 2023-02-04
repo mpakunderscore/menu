@@ -84,6 +84,16 @@ const RecipeText = (props) => {
                 {props.currentRecipe.hints.map(item => {return <div key={item}>{item}</div>})}
             </div>
 
+            <div className={'title-small'}>STORY</div>
+            <div className={'story'}>
+                <div>{props.currentRecipe.story}</div>
+            </div>
+
+            {/*<div className={'title-small'}>COMMENTS</div>*/}
+            {/*<div className={'comments'}>*/}
+            {/*    <div>{'This apple pie recipe looks delicious! With a flaky crust and a sweet and cinnamon-spiced filling, it\'s sure to be a hit at any gathering. The addition of a crumble topping takes it to the next level, adding a crunchy texture that complements the soft and juicy apples. I would recommend giving this recipe a try if you\'re looking for a classic dessert that never disappoints.'}</div>*/}
+            {/*</div>*/}
+
         </div>
     )
 }
