@@ -34,7 +34,14 @@ const Header = (props) => {
 
     let clickMenu = () => {
         console.log('click menu')
-        setMenuState(1)
+
+        if (menuState === 0 || !props.isFilter) {
+            setMenuState(1)
+            props.setIsFilter(true)
+        } else if (props.isFilter) {
+            setMenuState(0)
+            props.setIsFilter(false)
+        }
     }
 
     return (

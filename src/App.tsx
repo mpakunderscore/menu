@@ -8,6 +8,7 @@ import Recipe from "./components/recipe/Recipe";
 // import serverTexts from "./data/texts"
 import { createGesture, Gesture } from '@ionic/react';
 import Header from "./components/Header";
+import Filter from "./components/Filter";
 
 let uuid = require("uuid");
 
@@ -52,6 +53,8 @@ function App() {
     let [lang, setStateLang] = useState(languages[1])
 
     let [currentRecipe, setCurrentRecipe] = useState(false)
+    let [isFilter, setIsFilter] = useState(false)
+
 
     // setCurrentRecipe = (recipe) => {
     //     setCurrentRecipe(recipe)
@@ -161,8 +164,9 @@ function App() {
 
     return (
         <div id={'app'} className={'shadow-big'}>
-            <Header/>
+            <Header isFilter={isFilter} setIsFilter={setIsFilter}/>
             <Food setCurrentRecipe={setCurrentRecipe}/>
+            {!currentRecipe && isFilter && <Filter/>}
             {currentRecipe && <Recipe currentRecipe={currentRecipe} setCurrentRecipe={setCurrentRecipe}/>}
         </div>
     );
