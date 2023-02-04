@@ -9,6 +9,7 @@ import Recipe from "./components/recipe/Recipe";
 import { createGesture, Gesture } from '@ionic/react';
 import Header from "./components/Header";
 import Filter from "./components/Filter";
+import Fridge from "./components/Fridge";
 
 let uuid = require("uuid");
 
@@ -54,7 +55,7 @@ function App() {
 
     let [currentRecipe, setCurrentRecipe] = useState(false)
     let [isFilter, setIsFilter] = useState(false)
-
+    let [isFridge, setIsFridge] = useState(false)
 
     // setCurrentRecipe = (recipe) => {
     //     setCurrentRecipe(recipe)
@@ -164,9 +165,14 @@ function App() {
 
     return (
         <div id={'app'} className={'shadow-big'}>
-            <Header isFilter={isFilter} setIsFilter={setIsFilter}/>
-            <Food setCurrentRecipe={setCurrentRecipe}/>
-            {!currentRecipe && isFilter && <Filter/>}
+            <Header isFilter={isFilter}
+                    setIsFilter={setIsFilter}
+                    isFridge={isFridge}
+                    setIsFridge={setIsFridge}
+            />
+            {!isFridge && <Food setCurrentRecipe={setCurrentRecipe}/>}
+            {!currentRecipe && isFilter && !isFridge && <Filter/>}
+            {!currentRecipe && isFridge && <Fridge/>}
             {currentRecipe && <Recipe currentRecipe={currentRecipe} setCurrentRecipe={setCurrentRecipe}/>}
         </div>
     );

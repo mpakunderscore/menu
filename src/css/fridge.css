@@ -1,21 +1,23 @@
-#filter::-webkit-scrollbar {
+#fridge::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
 
-#filter {
-    position: absolute;
+#fridge {
+    /*position: absolute;*/
     top: 0;
     width: 100%;
     /*height: 100%;*/
     padding-top: 50px;
-    background: rgba(0, 0, 0, 0.9);
+    background: black;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     z-index: 2;
+
+    overflow-y: scroll;
 }
 
-#filter > div {
+#fridge > div {
     position: relative;
     width: 50%;
     max-width: 300px;
@@ -28,14 +30,14 @@
     justify-content: center;
 }
 
-#filter > div > div.title {
+#fridge > div > div.title {
     position: absolute;
 
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     width: 100%;
 
-    padding: 20px;
+    padding: 26px;
 
     text-align: center;
     /*line-height: 100%;*/

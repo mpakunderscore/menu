@@ -30,7 +30,7 @@ const Food = (props) => {
 
     return (
         <div id={'food'}>
-            {userRecipes.map((name, i) => {
+            {userRecipes.map((recipe, i) => {
                 let itemTitle = userRecipes[i] ? userRecipes[i].name.toUpperCase() : 'NO TITLE'
                 let hover = false
                 return <div key={i}

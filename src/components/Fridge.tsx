@@ -2,18 +2,12 @@ import React, {useState, useEffect, useReducer, useRef} from "react";
 // import {items} from "../data/items";
 import {inspect} from "util";
 import {recipes} from "../data/recipes";
-import '../css/filter.css'
+import '../css/fridge.css'
+import {getSortedIngredients} from "../data/ingredients";
 
-const Filter = (props) => {
+const Fridge = (props) => {
 
-    let [filterItems, setFilterItems] = useState([
-        {name: 'your Favorites'},
-        {name: 'good Soup'},
-        {name: 'late Breakfast'},
-        {name: 'Easy make'},
-        {name: 'i want Dessert'},
-        {name: 'is this Veg'},
-    ])
+    let [ingredients, setIngredients] = useState(getSortedIngredients())
 
     useEffect(() => {
         // let userRecipes = shuffleArray(recipes)
@@ -24,21 +18,19 @@ const Filter = (props) => {
     }, [])
 
     return (
-        <div id={'filter'}>
-            {filterItems.map((name, i) => {
-                let itemTitle = filterItems[i] ? filterItems[i].name.toUpperCase() : 'NO TITLE'
+        <div id={'fridge'}>
+            {ingredients.map((name, i) => {
+                let itemTitle = ingredients[i] ? ingredients[i].name.toUpperCase() : 'NO TITLE'
                 let hover = false
                 return <div key={i}
                             className={hover ? 'hover' : ''}
                             onTouchStart={() => hover = true}
-                            onTouchEnd={() => hover = false}
-                            onClick={() => props.setCurrentRecipe(filterItems[i])}>
+                            onTouchEnd={() => hover = false}>
                     <div className={'title'}>{itemTitle}</div>
-                    {/*<img title={userRecipes[i].name} src={'./images/food/' + userRecipes[i].image}/>*/}
                 </div>
             })}
         </div>
     )
 }
 
-export default Filter;
+export default Fridge;

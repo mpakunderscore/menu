@@ -79,63 +79,71 @@ export const recipes = [
         "story": "Apple pie is a classic dessert that has been enjoyed for generations. It's the perfect combination of sweet, juicy apples and a flaky, buttery crust. This recipe has been passed down from my grandmother and is sure to bring a smile to your face with every bite. Whether you serve it warm with a scoop of vanilla ice cream or cold with a cup of coffee, this pie is sure to become afamily favorite. So, gather your ingredients, preheat the oven, and let's get baking! In no time, the irresistible aroma of apples and cinnamon will fill your kitchen, and you'll be able to share a slice of this delicious pie with your loved ones. It's the perfect dessert for holidays, special occasions, or just a cozy night in. So, go ahead, give this recipe a try, and enjoy a slice of sweet and comforting apple pie!"
     },
     {
-        "id": "1",
-        "name": "Puff Pastry Tangerines",
-        "image": 'tangerines.png',
-        "servings": 8,
-        "prep_time": "20 minutes",
-        "cook_time": "20 minutes",
+        "id": "4",
+        "name": "Tom Yum",
+        "image": '4.png',
         "ingredients": [
             {
-                "name": "Puff Pastry",
-                "quantity": "1 sheet"
+                "name": "chicken or shrimp",
+                "quantity": "8 oz",
+                "preparation": "cut into bite-size pieces"
             },
             {
-                "name": "Tangerines",
-                "quantity": 4,
+                "name": "lemongrass",
+                "quantity": "2 stalks",
+                "preparation": "bruised and thinly sliced"
             },
             {
-                "name": "Sugar",
-                "quantity": "3 tablespoons",
+                "name": "galangal",
+                "quantity": "1 inch",
+                "preparation": "sliced"
             },
             {
-                "name": "Butter",
-                "quantity": 2,
-                "unit": "tablespoons"
+                "name": "kaffir lime leaves",
+                "quantity": "4-5 leaves"
             },
             {
-                "name": "Ground cinnamon",
-                "quantity": 1,
-                "unit": "teaspoon"
+                "name": "mushrooms",
+                "quantity": "8 oz",
+                "preparation": "sliced"
             },
             {
-                "name": "Egg",
-                "quantity": 1,
-                "unit": ""
+                "name": "fish sauce",
+                "quantity": "2-3 tbsp"
             },
             {
-                "name": "Powdered sugar",
-                "quantity": 3,
-                "unit": "tablespoons"
+                "name": "lime juice",
+                "quantity": "1/4 cup"
+            },
+            {
+                "name": "palm sugar",
+                "quantity": "2 tbsp"
+            },
+            {
+                "name": "chili flakes or fresh chili",
+                "quantity": "1 tbsp",
+                "preparation": "to taste"
+            },
+            {
+                "name": "cilantro",
+                "quantity": "1/4 cup",
+                "preparation": "chopped for garnish"
             }
         ],
         "instructions": [
-            "Preheat oven to 400°F (200°C)",
-            "Peel and slice tangerines into thin rounds.",
-            "Melt butter in a pan over medium heat. Add tangerine slices and sugar, cook for 1-1 minutes until the sugar dissolves.",
-            "Add cinnamon and stir.",
-            "Roll out the puff pastry on a lightly floured surface.",
-            "Cut the pastry into 8 equal squares.",
-            "Place a spoonful of the tangerine mixture onto each square.",
-            "Brush the edges with beaten egg.",
-            "Fold each square into a triangle and press the edges to seal.",
-            "Bake for 20 minutes or until golden brown.",
-            "Sprinkle with powdered sugar before serving."
+            "In a large pot, bring 4 cups of water to a boil.",
+            "Add the lemongrass, galangal, kaffir lime leaves and chili to the pot and simmer for 5 minutes.",
+            "Add the chicken or shrimp and mushrooms to the pot, and cook until the meat is cooked through and the mushrooms are tender, about 5 minutes.",
+            "Remove from heat and stir in the fish sauce, lime juice, and palm sugar.",
+            "Taste and adjust seasoning as needed.",
+            "Garnish with cilantro and serve with rice, if desired."
         ],
         "hints": [
-            "For a crispier pastry, you can prick the surface of the pastry with a fork before baking.",
-            "You can also add a splash of orange juice to the tangerine mixture for extra flavor.",
-            "Serve warm for best results."
+            "If you're using shrimp, make sure to add it in the last minute of cooking to avoid over-cooking it.",
+            "If you're using shrimp, you can use shrimp stock instead of water to give it more flavor.",
+            "If you're using chicken, you can use chicken stock instead of water to give it more flavor.",
+            "If you can't find galangal, you can substitute it with ginger.",
+            "If you can't find kaffir lime leaves, you can substitute it with regular lime leaves or zest of one lime."
         ]
     },
     {
@@ -295,71 +303,63 @@ export const recipes = [
         ]
     },
     {
-        "id": "4",
-        "name": "Tom Yum",
-        "image": '4.png',
+        "id": "1",
+        "name": "Puff Pastry Tangerines",
+        "image": 'tangerines.png',
+        "servings": 8,
+        "prep_time": "20 minutes",
+        "cook_time": "20 minutes",
         "ingredients": [
             {
-                "name": "chicken or shrimp",
-                "quantity": "8 oz",
-                "preparation": "cut into bite-size pieces"
+                "name": "Puff Pastry",
+                "quantity": "1 sheet"
             },
             {
-                "name": "lemongrass",
-                "quantity": "2 stalks",
-                "preparation": "bruised and thinly sliced"
+                "name": "Tangerines",
+                "quantity": 4,
             },
             {
-                "name": "galangal",
-                "quantity": "1 inch",
-                "preparation": "sliced"
+                "name": "Sugar",
+                "quantity": "3 tablespoons",
             },
             {
-                "name": "kaffir lime leaves",
-                "quantity": "4-5 leaves"
+                "name": "Butter",
+                "quantity": 2,
+                "unit": "tablespoons"
             },
             {
-                "name": "mushrooms",
-                "quantity": "8 oz",
-                "preparation": "sliced"
+                "name": "Ground cinnamon",
+                "quantity": 1,
+                "unit": "teaspoon"
             },
             {
-                "name": "fish sauce",
-                "quantity": "2-3 tbsp"
+                "name": "Egg",
+                "quantity": 1,
+                "unit": ""
             },
             {
-                "name": "lime juice",
-                "quantity": "1/4 cup"
-            },
-            {
-                "name": "palm sugar",
-                "quantity": "2 tbsp"
-            },
-            {
-                "name": "chili flakes or fresh chili",
-                "quantity": "1 tbsp",
-                "preparation": "to taste"
-            },
-            {
-                "name": "cilantro",
-                "quantity": "1/4 cup",
-                "preparation": "chopped for garnish"
+                "name": "Powdered sugar",
+                "quantity": 3,
+                "unit": "tablespoons"
             }
         ],
         "instructions": [
-            "In a large pot, bring 4 cups of water to a boil.",
-            "Add the lemongrass, galangal, kaffir lime leaves and chili to the pot and simmer for 5 minutes.",
-            "Add the chicken or shrimp and mushrooms to the pot, and cook until the meat is cooked through and the mushrooms are tender, about 5 minutes.",
-            "Remove from heat and stir in the fish sauce, lime juice, and palm sugar.",
-            "Taste and adjust seasoning as needed.",
-            "Garnish with cilantro and serve with rice, if desired."
+            "Preheat oven to 400°F (200°C)",
+            "Peel and slice tangerines into thin rounds.",
+            "Melt butter in a pan over medium heat. Add tangerine slices and sugar, cook for 1-1 minutes until the sugar dissolves.",
+            "Add cinnamon and stir.",
+            "Roll out the puff pastry on a lightly floured surface.",
+            "Cut the pastry into 8 equal squares.",
+            "Place a spoonful of the tangerine mixture onto each square.",
+            "Brush the edges with beaten egg.",
+            "Fold each square into a triangle and press the edges to seal.",
+            "Bake for 20 minutes or until golden brown.",
+            "Sprinkle with powdered sugar before serving."
         ],
         "hints": [
-            "If you're using shrimp, make sure to add it in the last minute of cooking to avoid over-cooking it.",
-            "If you're using shrimp, you can use shrimp stock instead of water to give it more flavor.",
-            "If you're using chicken, you can use chicken stock instead of water to give it more flavor.",
-            "If you can't find galangal, you can substitute it with ginger.",
-            "If you can't find kaffir lime leaves, you can substitute it with regular lime leaves or zest of one lime."
+            "For a crispier pastry, you can prick the surface of the pastry with a fork before baking.",
+            "You can also add a splash of orange juice to the tangerine mixture for extra flavor.",
+            "Serve warm for best results."
         ]
     },
     {
@@ -2188,5 +2188,37 @@ export const recipes = [
         "instructions": [],
         "hints": []
     }
-
 ]
+
+let getItems = () => {
+
+    let ingredients = {}
+
+    let globalRecipes = recipes
+    globalRecipes.map((recipe, i) => {
+        globalRecipes[i].ingredients.map((ingredient, j) => {
+            let name = globalRecipes[i].ingredients[j].name.toUpperCase()
+            if (ingredients[name]) {
+                ingredients[name] = 1 + ingredients[name]
+            } else {
+                ingredients[name] = 1
+            }
+        })
+    })
+
+    // console.log(ingredients)
+
+    // let sortable = [];
+    // for (let id in ingredients) {
+    //     sortable.push([id, ingredients[id]]);
+    // }
+    //
+    // sortable.sort(function(a, b) {
+    //     return b[1] - a[1];
+    // });
+
+    console.dir(ingredients)
+
+}
+
+getItems()

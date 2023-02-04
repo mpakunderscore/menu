@@ -4,8 +4,10 @@ import {inspect} from "util";
 import {recipes} from "../data/recipes";
 import '../css/header.css'
 
+let appName = 'AMENU'
 const VERSION = '0.4.0'
-let action = 'FILTER'
+let action1 = 'FILTER'
+let action2 = 'FRIDGE'
 
 const Header = (props) => {
 
@@ -34,7 +36,15 @@ const Header = (props) => {
 
     let clickMenu = () => {
         console.log('click menu')
+        if (menuState === 0) {
+            setMenuState(1)
 
+        } else if (props.isFilter) {
+            setMenuState(0)
+        }
+    }
+
+    let clickAction1 = () => {
         if (menuState === 0 || !props.isFilter) {
             setMenuState(1)
             props.setIsFilter(true)
@@ -44,11 +54,19 @@ const Header = (props) => {
         }
     }
 
+    let clickAction2 = () => {
+        // console.log('ACTION 2')
+        if (!props.isFridge)
+            props.setIsFridge(true)
+        else
+            props.setIsFridge(false)
+    }
+
     return (
         <div id={'header'} className={(menuState === 1 ? 'open' : '')} onClick={() => clickMenu()}>
-            <span>{action}</span>
-            AMENU
-            <span>{VERSION}</span>
+            <span onClick={() => clickAction1()}>{action1}</span>
+            {appName}
+            <span onClick={() => clickAction2()}>{action2}</span>
         </div>
     )
 }
