@@ -7,12 +7,12 @@ import '../css/filter.css'
 const Filter = (props) => {
 
     let [filterItems, setFilterItems] = useState([
-        {name: 'Favorites'},
-        {name: 'Random'},
-        {name: 'Breakfast'},
-        {name: 'Soup'},
-        {name: 'Dessert'},
-        {name: 'Veg'},
+        {name: 'your Favorites'},
+        {name: 'this Soup'},
+        {name: 'late Breakfast'},
+        {name: 'Easy make'},
+        {name: 'i want Dessert'},
+        {name: 'is this Veg'},
     ])
 
     useEffect(() => {

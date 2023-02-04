@@ -92,9 +92,18 @@ main {
     z-index: 2;
 }
 
+@media only screen and (min-width: 600px) {
+
+}
+
 @media only screen and (min-width: 960px) {
+    #food {
+        margin: auto;
+    }
+
     main {
-        width: 900px;
+        width: 100%;
+        max-width: 900px;
         overflow: hidden;
     }
 
