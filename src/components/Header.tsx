@@ -64,9 +64,9 @@ const Header = (props) => {
 
     return (
         <div id={'header'} className={(menuState === 1 ? 'open' : '')} onClick={() => clickMenu()}>
-            <span onClick={() => clickAction1()}>{action1}</span>
+            <span className={(props.isFilter ? 'active' : '')} onClick={() => clickAction1()}>{action1}</span>
             {appName}
-            <span onClick={() => clickAction2()}>{action2}</span>
+            <span className={(props.isFridge ? 'active' : '')} onClick={() => clickAction2()}>{action2}</span>
         </div>
     )
 }

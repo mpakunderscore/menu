@@ -23,6 +23,11 @@
     padding-right: 10px;
 }
 
+#header span.active {
+    font-size: 14px;
+    opacity: 1;
+}
+
 #header.open {
     opacity: .9;
 }

@@ -19,25 +19,41 @@
 
 #fridge > div {
     position: relative;
-    width: 50%;
+    width: 33%;
     max-width: 300px;
     overflow: hidden;
     aspect-ratio: 1;
+    background: black;
     color: whitesmoke;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    transition: all 1s;
+}
+
+/*#fridge > div.hover > div.title {*/
+/*    color: red;*/
+/*}*/
+
+#fridge > div.active {
+    background: rgba(255, 255, 255, .2) !important;
+}
+
+#fridge > div.active > div.title {
+    /*color: rgba(255, 255, 255, 0.88);*/
 }
 
 #fridge > div > div.title {
     position: absolute;
 
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
-    width: 100%;
+    width: 80%;
 
-    padding: 26px;
+    /*padding: 10px;*/
+    margin: 10%;
 
     text-align: center;
     /*line-height: 100%;*/
@@ -47,5 +63,12 @@
     mix-blend-mode: hard-light;
     word-wrap: break-word;
 
+    white-space: normal;
+    hyphens: none;
+
     /*border-radius: 10px;*/
+}
+
+#fridge > div:hover {
+    background: rgba(255, 255, 255, .1);
 }

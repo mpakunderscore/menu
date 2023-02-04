@@ -84,10 +84,10 @@ const RecipeText = (props) => {
                 {props.currentRecipe.hints.map(item => {return <div key={item}>{item}</div>})}
             </div>
 
-            <div className={'title-small'}>STORY</div>
-            <div className={'story'}>
-                <div>{props.currentRecipe.story}</div>
-            </div>
+            {/*<div className={'title-small'}>STORY</div>*/}
+            {/*<div className={'story'}>*/}
+            {/*    <div>{props.currentRecipe.story}</div>*/}
+            {/*</div>*/}
 
             {/*<div className={'title-small'}>COMMENTS</div>*/}
             {/*<div className={'comments'}>*/}

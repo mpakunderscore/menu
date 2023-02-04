@@ -115,6 +115,14 @@ main {
         scrollbar-width: none;
     }
 
+    #header {
+        max-width: 600px;
+    }
+
+    #filter {
+        max-width: 900px;
+    }
+
     #recipe::-webkit-scrollbar {
         display: none;  /* Safari and Chrome */
     }

@@ -134,6 +134,8 @@ function App() {
             if (velocityX > 1) {
                 console.log('BACK')
                 setCurrentRecipe(null)
+                setIsFilter(false)
+                setIsFridge(false)
             }
 
             // console.log({type, currentX, deltaX, velocityX})
@@ -158,6 +160,10 @@ function App() {
 
     // let appInitKey
 
+    let setFilter = (name) => {
+        console.log(name)
+    }
+
     useEffect(() => {
         // initPWA()
         initGestures()
@@ -171,7 +177,7 @@ function App() {
                     setIsFridge={setIsFridge}
             />
             {!isFridge && <Food setCurrentRecipe={setCurrentRecipe}/>}
-            {!currentRecipe && isFilter && !isFridge && <Filter/>}
+            {!currentRecipe && isFilter && !isFridge && <Filter setFilter={setFilter}/>}
             {!currentRecipe && isFridge && <Fridge/>}
             {currentRecipe && <Recipe currentRecipe={currentRecipe} setCurrentRecipe={setCurrentRecipe}/>}
         </div>
