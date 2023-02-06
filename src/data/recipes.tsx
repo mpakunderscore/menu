@@ -427,6 +427,140 @@ export const recipes = [
         ]
     },
     {
+        "id": "8",
+        "name": "Creamy Cucumber and Tomato Salad",
+        "image": '8.png',
+        "ingredients": [
+            {
+                "name": "cucumbers",
+                "quantity": "2",
+                "preparation": "sliced"
+            },
+            {
+                "name": "tomatoes",
+                "quantity": "2",
+                "preparation": "diced"
+            },
+            {
+                "name": "red onion",
+                "quantity": "1/4",
+                "preparation": "sliced"
+            },
+            {
+                "name": "feta cheese",
+                "quantity": "1/2 cup",
+                "preparation": "crumbled"
+            },
+            {
+                "name": "fresh dill",
+                "quantity": "1/4 cup",
+                "preparation": "chopped"
+            },
+            {
+                "name": "mayonnaise",
+                "quantity": "1/4 cup"
+            },
+            {
+                "name": "sour cream",
+                "quantity": "1/4 cup"
+            },
+            {
+                "name": "lemon juice",
+                "quantity": "1 tbsp"
+            },
+            {
+                "name": "salt",
+                "quantity": "1/4 tsp"
+            },
+            {
+                "name": "black pepper",
+                "quantity": "1/4 tsp"
+            }
+        ],
+        "instructions": [
+            "In a large bowl, combine cucumbers, tomatoes, red onion, feta cheese, and dill.",
+            "In a small bowl, whisk together mayonnaise, sour cream, lemon juice, salt and pepper.",
+            "Pour the dressing over the salad and toss to coat.",
+            "Refrigerate for at least 30 minutes to allow the flavors to meld.",
+            "Taste and adjust seasoning as needed.",
+            "Serve chilled and enjoy!"
+        ],
+        "hints": [
+            "You can also add some sliced bell peppers or avocado for more vegetables.",
+            "You can also use other herbs such as parsley or mint instead of dill.",
+            "If you prefer a creamier salad, you can add more mayonnaise or sour cream.",
+            "If you prefer a tangier salad, you can add more lemon juice."
+        ]
+    },
+    {
+        "id": "9",
+        "name": "Spring Rolls",
+        "image": '9.png',
+        "ingredients": [
+            {
+                "name": "rice paper wrappers",
+                "quantity": "1 package"
+            },
+            {
+                "name": "shrimp",
+                "quantity": "8 oz",
+                "preparation": "peeled and deveined"
+            },
+            {
+                "name": "vermicelli noodles",
+                "quantity": "4 oz",
+                "preparation": "cooked according to package instructions"
+            },
+            {
+                "name": "lettuce",
+                "quantity": "1 head",
+                "preparation": "leaves separated"
+            },
+            {
+                "name": "mint leaves",
+                "quantity": "1/4 cup"
+            },
+            {
+                "name": "basil leaves",
+                "quantity": "1/4 cup"
+            },
+            {
+                "name": "cilantro",
+                "quantity": "1/4 cup"
+            },
+            {
+                "name": "carrots",
+                "quantity": "2",
+                "preparation": "julienned"
+            },
+            {
+                "name": "peanut sauce",
+                "quantity": "1/4 cup"
+            },
+            {
+                "name": "sweet chili sauce",
+                "quantity": "1/4 cup"
+            }
+        ],
+        "instructions": [
+            "Cook the shrimp in a pan or grill until they turn pink and are cooked through, about 2-3 minutes per side. Remove from heat and slice into small pieces.",
+            "Fill a shallow dish with warm water.",
+            "Dip one rice paper wrapper into the warm water for about 10-15 seconds, or until it becomes pliable.",
+            "Lay the wrapper on a clean surface.",
+            "Place a lettuce leaf, a small handful of vermicelli noodles, some herbs, some shrimp, some julienned carrots, and a sprinkle of cilantro on the wrapper, leaving about 2 inches of space at the top and bottom of the wrapper.",
+            "Fold the bottom of the wrapper over the filling, tucking it in tightly.",
+            "Fold in the sides of the wrapper and continue rolling until the spring roll is sealed.",
+            "Repeat with the remaining wrappers and filling.",
+            "Serve with peanut sauce and sweet chili sauce for dipping."
+        ],
+        "hints": [
+            "You can also use chicken, pork, or tofu instead of shrimp.",
+            "You can also add some thinly sliced bell pepper or cucumber for more vegetables.",
+            "If you prefer a sweeter sauce, you can add more sweet chili sauce. If you prefer a saltier sauce, you can add more soy sauce.",
+            "You can also serve the spring rolls with a dipping sauce made with fish sauce, lime juice, sugar and garlic for a more authentic Thai taste."
+        ]
+    },
+    {
         "id": "6",
         "name": "Chicken in Sweet and Sour Sauce",
         "image": '6.png',
@@ -561,140 +695,6 @@ export const recipes = [
             "You can also use honey or agave nectar instead of sugar for a different sweetness.",
             "If you prefer a stronger lemon flavor, you can add more lemons.",
             "You can also make a larger batch and store it in the refrigerator for up to 3 days."
-        ]
-    },
-    {
-        "id": "8",
-        "name": "Creamy Cucumber and Tomato Salad",
-        "image": '8.png',
-        "ingredients": [
-            {
-                "name": "cucumbers",
-                "quantity": "2",
-                "preparation": "sliced"
-            },
-            {
-                "name": "tomatoes",
-                "quantity": "2",
-                "preparation": "diced"
-            },
-            {
-                "name": "red onion",
-                "quantity": "1/4",
-                "preparation": "sliced"
-            },
-            {
-                "name": "feta cheese",
-                "quantity": "1/2 cup",
-                "preparation": "crumbled"
-            },
-            {
-                "name": "fresh dill",
-                "quantity": "1/4 cup",
-                "preparation": "chopped"
-            },
-            {
-                "name": "mayonnaise",
-                "quantity": "1/4 cup"
-            },
-            {
-                "name": "sour cream",
-                "quantity": "1/4 cup"
-            },
-            {
-                "name": "lemon juice",
-                "quantity": "1 tbsp"
-            },
-            {
-                "name": "salt",
-                "quantity": "1/4 tsp"
-            },
-            {
-                "name": "black pepper",
-                "quantity": "1/4 tsp"
-            }
-        ],
-        "instructions": [
-            "In a large bowl, combine cucumbers, tomatoes, red onion, feta cheese, and dill.",
-            "In a small bowl, whisk together mayonnaise, sour cream, lemon juice, salt and pepper.",
-            "Pour the dressing over the salad and toss to coat.",
-            "Refrigerate for at least 30 minutes to allow the flavors to meld.",
-            "Taste and adjust seasoning as needed.",
-            "Serve chilled and enjoy!"
-        ],
-        "hints": [
-            "You can also add some sliced bell peppers or avocado for more vegetables.",
-            "You can also use other herbs such as parsley or mint instead of dill.",
-            "If you prefer a creamier salad, you can add more mayonnaise or sour cream.",
-            "If you prefer a tangier salad, you can add more lemon juice."
-        ]
-    },
-    {
-        "id": "9",
-        "name": "Spring Rolls",
-        "image": '9.png',
-        "ingredients": [
-            {
-                "name": "rice paper wrappers",
-                "quantity": "1 package"
-            },
-            {
-                "name": "shrimp",
-                "quantity": "8 oz",
-                "preparation": "peeled and deveined"
-            },
-            {
-                "name": "vermicelli noodles",
-                "quantity": "4 oz",
-                "preparation": "cooked according to package instructions"
-            },
-            {
-                "name": "lettuce",
-                "quantity": "1 head",
-                "preparation": "leaves separated"
-            },
-            {
-                "name": "mint leaves",
-                "quantity": "1/4 cup"
-            },
-            {
-                "name": "basil leaves",
-                "quantity": "1/4 cup"
-            },
-            {
-                "name": "cilantro",
-                "quantity": "1/4 cup"
-            },
-            {
-                "name": "carrots",
-                "quantity": "2",
-                "preparation": "julienned"
-            },
-            {
-                "name": "peanut sauce",
-                "quantity": "1/4 cup"
-            },
-            {
-                "name": "sweet chili sauce",
-                "quantity": "1/4 cup"
-            }
-        ],
-        "instructions": [
-            "Cook the shrimp in a pan or grill until they turn pink and are cooked through, about 2-3 minutes per side. Remove from heat and slice into small pieces.",
-            "Fill a shallow dish with warm water.",
-            "Dip one rice paper wrapper into the warm water for about 10-15 seconds, or until it becomes pliable.",
-            "Lay the wrapper on a clean surface.",
-            "Place a lettuce leaf, a small handful of vermicelli noodles, some herbs, some shrimp, some julienned carrots, and a sprinkle of cilantro on the wrapper, leaving about 2 inches of space at the top and bottom of the wrapper.",
-            "Fold the bottom of the wrapper over the filling, tucking it in tightly.",
-            "Fold in the sides of the wrapper and continue rolling until the spring roll is sealed.",
-            "Repeat with the remaining wrappers and filling.",
-            "Serve with peanut sauce and sweet chili sauce for dipping."
-        ],
-        "hints": [
-            "You can also use chicken, pork, or tofu instead of shrimp.",
-            "You can also add some thinly sliced bell pepper or cucumber for more vegetables.",
-            "If you prefer a sweeter sauce, you can add more sweet chili sauce. If you prefer a saltier sauce, you can add more soy sauce.",
-            "You can also serve the spring rolls with a dipping sauce made with fish sauce, lime juice, sugar and garlic for a more authentic Thai taste."
         ]
     },
     {

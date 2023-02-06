@@ -1,6 +1,7 @@
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const webpack = new require('webpack')
+const PACKAGE = require("./package.json");
 
 let VERSION
 
@@ -22,14 +23,12 @@ module.exports = () => {
 
     const plugins = [];
 
+    let PACKAGE = require('./package.json');
+
     let now = new Date()
-    VERSION = JSON.stringify(process.env.HEROKU_RELEASE_VERSION || 'DEBUG '
-            + (now.getDate() + '/' +
-            (now.getMonth() + 1) + '/' +
-            now.getFullYear() + ' ' +
-            now.getHours() + ':' +
-            now.getMinutes() + ':' +
-            now.getSeconds()))
+    VERSION = JSON.stringify(PACKAGE.version + ' ' + now.toUTCString())
+
+    // console.log(VERSION)
 
     plugins.push(new webpack.DefinePlugin({
         VERSION: VERSION,

@@ -3,16 +3,57 @@ import React, {useState, useEffect, useReducer, useRef} from "react";
 import {inspect} from "util";
 import {recipes} from "../data/recipes";
 import '../css/fridge.css'
-import {getSortedIngredients, ingredientsObjects} from "../data/ingredients";
+import {colors, getSortedIngredients, ingredientsObjects} from "../data/ingredients";
+import {getIngredients, setIngredient} from "../utils/storage";
+import {ingredientsType} from "../data/types";
 
 const Fridge = (props) => {
 
     window.scrollTo(0, 0);
 
-    let [ingredients, setIngredients] = useState(ingredientsObjects)
-    let [ingredientsActive, setIngredientsActive] = useState({})
+    let [ingredients, setIngredients] = useState([])
+    let [ingredientsActive, setIngredientsActive] = useState(getIngredients())
+
+    let [ingredientsByType, setIngredientsByType] = useState({})
+    let [types, setTypes] = useState([])
 
     useEffect(() => {
+
+        let sortedIngredients = {'NO TYPE': []}
+        ingredientsObjects.map((item, i) => {
+
+            let name = ingredientsObjects[i].name
+            let type = ingredientsType[name]
+
+            if (type) {
+                type = type.toLowerCase()
+                if (!sortedIngredients[type]) {
+                    sortedIngredients[type] = []
+                }
+                sortedIngredients[type].push(ingredientsObjects[i])
+            } else {
+                sortedIngredients['NO TYPE'].push(ingredientsObjects[i])
+            }
+
+            setIngredientsByType(sortedIngredients)
+            console.log(sortedIngredients)
+
+            // Object.entries(sortedIngredients)
+            let sorted = Object.keys(sortedIngredients).sort(function(a,b) {
+                return sortedIngredients[b].length - sortedIngredients[a].length
+            })
+            // Object.entries()
+            console.log(sorted)
+            setTypes(sorted)
+
+            // console.log(sortedIngredients)
+            // let itemsLeft = []
+            // sortedIngredients['NO TYPE'].map(item => {
+            //     itemsLeft.push(item.name)
+            // })
+            // console.log(itemsLeft)
+        })
+
         // let userRecipes = shuffleArray(recipes)
         // let userRecipes = recipes
         // console.log(userRecipes.length)
@@ -21,25 +62,41 @@ const Fridge = (props) => {
 
     }, [])
 
+    const fridgeText = 'Please select the ingredients you have and I will select the recipes for you'
+
     let clickIngredient = (name) => {
-        console.log(name)
+        // console.log(name)
         ingredientsActive[name] = !ingredientsActive[name]
+        setIngredient(name, ingredientsActive[name])
         setIngredientsActive({...ingredientsActive})
-        console.log(ingredientsActive)
+        // console.log(ingredientsActive)
     }
 
     return (
         <div id={'fridge'}>
-            {ingredients.map((name, i) => {
-                let itemTitle = ingredients[i] ? ingredients[i].name.toUpperCase() : 'NO TITLE'
-                let hover = false
-                let active = ingredientsActive[ingredients[i].name]
-                return <div key={i}
-                            className={(active ? 'active' : '') + (hover ? ' hover' : '')}
-                            onTouchStart={() => hover = true}
-                            onTouchEnd={() => hover = false}
-                            onClick={() => clickIngredient(ingredients[i].name)}>
-                    <div className={'title'}>{active ? itemTitle : itemTitle}</div>
+
+            {types.map((type) => {
+
+                return <div key={type} className={'grid'}>
+
+                    <span>{type.toUpperCase() + 'S'}</span>
+
+                    {ingredientsByType[type] ? ingredientsByType[type].map((name, i) => {
+                        let itemTitle = ingredientsByType[type][i] ? ingredientsByType[type][i].name.toUpperCase() : 'NO TITLE'
+                        let hover = false
+                        let active = ingredientsActive[ingredientsByType[type][i].name]
+                        let color = colors[ingredientsByType[type][i].name] ? colors[ingredientsByType[type][i].name] : '#e128e1'
+                        return <div key={i}
+                                    className={(active ? 'active' : '') + (hover ? ' hover' : '')}
+                                    style={{background: (active ? '#202020' : '')}}
+                                    onTouchStart={() => hover = true}
+                                    onTouchEnd={() => hover = false}
+                                    onClick={() => clickIngredient(ingredientsByType[type][i].name)}>
+                            <div className={'title'} style={{color: (active ? color : '')}}>{active ? itemTitle : itemTitle}</div>
+                        </div>
+
+                    }) : ''}
+
                 </div>
             })}
         </div>

@@ -23,6 +23,14 @@
     padding-right: 10px;
 }
 
+#header span:first-child {
+    padding-left: 50px;
+}
+
+#header span:last-child {
+    padding-right: 50px;
+}
+
 #header span.active {
     font-size: 14px;
     opacity: 1;

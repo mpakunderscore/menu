@@ -16,6 +16,8 @@ const shuffleArray = array => {
     return array
 }
 
+declare var VERSION: string;
+
 const Food = (props) => {
 
     let [userRecipes, setUserRecipes] = useState([])
@@ -30,6 +32,9 @@ const Food = (props) => {
 
     return (
         <div id={'food'}>
+            <div id={'version'}>
+                {VERSION}
+            </div>
             {userRecipes.map((recipe, i) => {
                 let itemTitle = userRecipes[i] ? userRecipes[i].name.toUpperCase() : 'NO TITLE'
                 let hover = false

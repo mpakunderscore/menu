@@ -17,3 +17,18 @@ export let setFavorites = (id, value) => {
 export let getFavorite = (id) => {
     return getItem(names.FAVORITES)[id]
 }
+
+export let getFavorites = () => {
+    return getItem(names.FAVORITES)
+}
+
+export let setIngredient = (id, value) => {
+    let favorites = getItem(names.INGREDIENTS)
+    favorites[id] = value
+    setItem(names.INGREDIENTS, {...favorites})
+}
+
+export let getIngredients = () => {
+    // console.log(getItem(names.INGREDIENTS))
+    return getItem(names.INGREDIENTS)
+}

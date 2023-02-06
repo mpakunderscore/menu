@@ -72,3 +72,11 @@
     background: rgba(0, 0, 0, 0.5);
     transition: 1s all ease-in;
 }
+
+#version {
+    /*margin: 20px;*/
+    font-size: 14px;
+    color: whitesmoke;
+    text-align: center;
+    /*width: calc(100% - 40px);*/
+}

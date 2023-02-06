@@ -5,7 +5,6 @@ import {recipes} from "../data/recipes";
 import '../css/header.css'
 
 let appName = 'AMENU'
-const VERSION = '0.4.0'
 let action1 = 'FILTER'
 let action2 = 'FRIDGE'
 
@@ -47,6 +46,7 @@ const Header = (props) => {
     let clickAction1 = () => {
         if (menuState === 0 || !props.isFilter) {
             setMenuState(1)
+            props.setIsFridge(false)
             props.setIsFilter(true)
         } else if (props.isFilter) {
             setMenuState(0)
@@ -56,9 +56,10 @@ const Header = (props) => {
 
     let clickAction2 = () => {
         // console.log('ACTION 2')
-        if (!props.isFridge)
+        if (!props.isFridge) {
+            props.setIsFilter(false)
             props.setIsFridge(true)
-        else
+        } else
             props.setIsFridge(false)
     }
 
