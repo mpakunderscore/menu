@@ -16,8 +16,8 @@ const Filter = (props) => {
     ])
 
     useEffect(() => {
-        // let userRecipes = shuffleArray(recipes)
-        // let userRecipes = recipes
+        // let userRecipes = shuffleArray(newRecipes.tsx)
+        // let userRecipes = newRecipes.tsx
         // console.log(userRecipes.length)
         // userRecipes.unshift({name: 'FAVORITES', image: '', ingredients: [], instructions: [], hints: []})
         // setFilterItems(userRecipes)

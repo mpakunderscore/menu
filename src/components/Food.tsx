@@ -1,9 +1,7 @@
 import React, {useState, useEffect, useReducer, useRef} from "react";
-// import {items} from "../data/items";
-import {inspect} from "util";
 import {recipes} from "../data/recipes";
 import '../css/food.css'
-import Header from "./Header";
+
 
 const shuffleArray = array => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -23,8 +21,8 @@ const Food = (props) => {
     let [userRecipes, setUserRecipes] = useState([])
 
     useEffect(() => {
-        // let userRecipes = shuffleArray(recipes)
-        let userRecipes = recipes
+        let userRecipes = shuffleArray(recipes)
+        // let userRecipes = recipes
         console.log(userRecipes.length)
         // userRecipes.unshift({name: 'FAVORITES', image: '', ingredients: [], instructions: [], hints: []})
         setUserRecipes(userRecipes)

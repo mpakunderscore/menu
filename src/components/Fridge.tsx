@@ -54,15 +54,15 @@ const Fridge = (props) => {
             // console.log(itemsLeft)
         })
 
-        // let userRecipes = shuffleArray(recipes)
-        // let userRecipes = recipes
+        // let userRecipes = shuffleArray(newRecipes.tsx)
+        // let userRecipes = newRecipes.tsx
         // console.log(userRecipes.length)
         // userRecipes.unshift({name: 'FAVORITES', image: '', ingredients: [], instructions: [], hints: []})
         // setFilterItems(userRecipes)
 
     }, [])
 
-    const fridgeText = 'Please select the ingredients you have and I will select the recipes for you'
+    const fridgeText = 'Please select the ingredients you have and I will select the newRecipes.tsx for you'
 
     let clickIngredient = (name) => {
         // console.log(name)
