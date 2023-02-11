@@ -8669,15 +8669,15 @@ let getItems = () => {
     let globalRecipes = recipes
     globalRecipes.map((recipe, i) => {
 
-        console.log(globalRecipes[i].name)
-        console.log(globalRecipes[i].ingredients)
+        // console.log(globalRecipes[i].name)
+        // console.log(globalRecipes[i].ingredients)
 
         globalRecipes[i].ingredients.map((ingredient, j) => {
             // @ts-ignore
 
             let ingredientName = globalRecipes[i].ingredients[j].name
             if (!ingredientName) {
-                console.log(globalRecipes[i].ingredients[j])
+                // console.log(globalRecipes[i].ingredients[j])
             }
 
             let name = globalRecipes[i].ingredients[j].name.toUpperCase()
@@ -8700,7 +8700,7 @@ let getItems = () => {
     //     return b[1] - a[1];
     // });
 
-    console.dir(ingredients)
+    // console.dir(ingredients)
 
 }
 

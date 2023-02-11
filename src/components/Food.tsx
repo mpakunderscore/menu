@@ -30,9 +30,6 @@ const Food = (props) => {
 
     return (
         <div id={'food'}>
-            <div id={'version'}>
-                {VERSION}
-            </div>
             {userRecipes.map((recipe, i) => {
                 let itemTitle = userRecipes[i] ? userRecipes[i].name.toUpperCase() : 'NO TITLE'
                 let hover = false
@@ -45,6 +42,9 @@ const Food = (props) => {
                     <img title={userRecipes[i].name} src={'./images/food/' + userRecipes[i].image}/>
                 </div>
             })}
+            <div id={'version'}>
+                {VERSION}
+            </div>
         </div>
     )
 }

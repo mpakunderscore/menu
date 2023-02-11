@@ -149,7 +149,7 @@ export let getSortedIngredients = () => {
         final.push({id: j, name: sortable[j][0], count: sortable[j][1], emoji: ''})
     }
 
-    console.log(listNames)
+    // console.log(listNames)
 
     return final
 }
