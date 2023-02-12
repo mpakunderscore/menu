@@ -43,7 +43,7 @@ const Food = (props) => {
                 </div>
             })}
             <div id={'version'}>
-                {VERSION}
+                <div>{VERSION}</div>
             </div>
         </div>
     )

@@ -75,8 +75,13 @@
 
 #version {
     /*margin: 20px;*/
-    font-size: 14px;
+    /*width: calc(100% - 40px);*/
+    align-items: center;
+}
+
+#version > div {
+    width: 70%;
+    font-size: 16px;
     color: whitesmoke;
     text-align: center;
-    /*width: calc(100% - 40px);*/
 }

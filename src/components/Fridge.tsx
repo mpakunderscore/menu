@@ -23,7 +23,11 @@ const Fridge = (props) => {
         ingredientsObjects.map((item, i) => {
 
             let name = ingredientsObjects[i].name
+                .split('(')[0]
+                .split(',')[0]
             let type = ingredientsType[name]
+
+            ingredientsObjects[i].name = name
 
             if (type) {
                 type = type.toLowerCase()
@@ -47,11 +51,11 @@ const Fridge = (props) => {
             setTypes(sorted)
 
             // console.log(sortedIngredients)
-            // let itemsLeft = []
-            // sortedIngredients['NO TYPE'].map(item => {
-            //     itemsLeft.push(item.name)
-            // })
-            // console.log(itemsLeft)
+            let itemsLeft = []
+            sortedIngredients['NO TYPE'].map(item => {
+                itemsLeft.push(item.name)
+            })
+            console.log(itemsLeft)
         })
 
         // let userRecipes = shuffleArray(newRecipes.tsx)
