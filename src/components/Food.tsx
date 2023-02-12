@@ -21,8 +21,8 @@ const Food = (props) => {
     let [userRecipes, setUserRecipes] = useState([])
 
     useEffect(() => {
-        let userRecipes = shuffleArray(recipes)
-        // let userRecipes = recipes
+        // let userRecipes = shuffleArray(recipes)
+        let userRecipes = recipes
         console.log(userRecipes.length)
         // userRecipes.unshift({name: 'FAVORITES', image: '', ingredients: [], instructions: [], hints: []})
         setUserRecipes(userRecipes)
@@ -39,7 +39,7 @@ const Food = (props) => {
                             onTouchEnd={() => hover = false}
                             onClick={() => props.setCurrentRecipe(userRecipes[i])}>
                     <div className={'title'}>{itemTitle}</div>
-                    <img title={userRecipes[i].name} src={'./images/food/' + userRecipes[i].image}/>
+                    <img loading="lazy" title={userRecipes[i].name} src={'./images/food/' + userRecipes[i].image} alt={''}/>
                 </div>
             })}
             <div id={'version'}>

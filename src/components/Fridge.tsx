@@ -36,14 +36,14 @@ const Fridge = (props) => {
             }
 
             setIngredientsByType(sortedIngredients)
-            console.log(sortedIngredients)
+            // console.log(sortedIngredients)
 
             // Object.entries(sortedIngredients)
             let sorted = Object.keys(sortedIngredients).sort(function(a,b) {
                 return sortedIngredients[b].length - sortedIngredients[a].length
             })
             // Object.entries()
-            console.log(sorted)
+            // console.log(sorted)
             setTypes(sorted)
 
             // console.log(sortedIngredients)
