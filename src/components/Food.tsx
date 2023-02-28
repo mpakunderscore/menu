@@ -21,8 +21,8 @@ const Food = (props) => {
     let [userRecipes, setUserRecipes] = useState([])
 
     useEffect(() => {
-        // let userRecipes = shuffleArray(recipes)
-        let userRecipes = recipes
+        let userRecipes = shuffleArray(recipes)
+        // let userRecipes = recipes
         console.log(userRecipes.length)
         // userRecipes.unshift({name: 'FAVORITES', image: '', ingredients: [], instructions: [], hints: []})
         setUserRecipes(userRecipes)
