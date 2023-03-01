@@ -2166,7 +2166,7 @@ export const recipes = [
         "ingredients": [
             {
                 "name": "boneless, skinless chicken breasts",
-                "quantity": "4 (6-ounce)"
+                "quantity": "4-6 ounce"
             },
             {
                 "name": "fajita seasoning",

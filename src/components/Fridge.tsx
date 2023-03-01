@@ -83,6 +83,8 @@ const Fridge = (props) => {
 
                 return <div key={type} className={'grid'}>
 
+                    <p style={{color: 'white', margin: '20px'}}>{'THIS PAGE IS UNDER DEVELOPMENT / INGREDIENT DATA COLLECTION'}</p>
+
                     <span>{type.toUpperCase() + 'S'}</span>
 
                     {ingredientsByType[type] ? ingredientsByType[type].map((name, i) => {

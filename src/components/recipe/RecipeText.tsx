@@ -53,12 +53,22 @@ const RecipeText = (props) => {
 
     let clickInstruction = () => {}
 
+    let countTypes = {}
+
     return (
         <div className={'text'}>
 
             <div className={'title-small'}>INGREDIENTS</div>
             <div className={'ingredients'}>
                 {props.currentRecipe.ingredients.map((item, i) => {
+
+                    if (item.amount) {
+                        item.quantity = item.amount.split(',')[0]
+                        let preparation = item.amount.split(',')[1]
+                    } else {
+                        item.quantity = item.quantity.split(',')[0]
+                    }
+
                     return <div key={i}>
                         <div>{item.quantity}</div>
                         <div className={checked[i] ? 'bold' : ''}
