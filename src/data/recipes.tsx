@@ -118,7 +118,7 @@ export const recipes = [
                 "amount": "1/4 tablespoon"
             }
         ],
-        "directions": [
+        "instructions": [
             "Beat the eggs, milk, salt, and pepper in a small bowl with a fork or whisk until well combined.",
             "Heat the butter or oil in a non-stick pan over medium heat.",
             "Pour in the egg mixture and cook, stirring gently with a spatula, until the eggs are just set but still moist, 2 to 3 minutes.",
@@ -1381,7 +1381,7 @@ export const recipes = [
             },
             {
                 "name": "angel hair pasta",
-                "amount": "1 lb, cooked according to package directions"
+                "amount": "1 lb, cooked according to package instructions"
             }
         ],
         "instructions": [
@@ -1821,7 +1821,7 @@ export const recipes = [
             "Dredge the chicken legs in the flour mixture, making sure they are well coated.",
             "Heat the vegetable oil in a large, deep pan until it reaches 350°F.",
             "Carefully add the chicken legs to the hot oil and cook for 10-12 minutes or until golden brown and fully cooked (165°F internal temperature).",
-            "While the chicken is cooking, prepare the waffles according to the package directions, using the waffle mix, milk, and eggs.",
+            "While the chicken is cooking, prepare the waffles according to the package instructions, using the waffle mix, milk, and eggs.",
             "Serve the fried chicken on top of the waffles and garnish with syrup and butter, if desired."
         ],
         "hints": [
@@ -2398,7 +2398,7 @@ export const recipes = [
             }
         ],
         "instructions": [
-            "Cook the pasta according to the package directions until al dente.",
+            "Cook the pasta according to the package instructions until al dente.",
             "Meanwhile, heat the olive oil in a large skillet over medium heat.",
             "Season the chicken with salt and pepper and add it to the skillet.",
             "Cook the chicken until golden brown and cooked through, about 8-10 minutes.",
@@ -5817,7 +5817,7 @@ export const recipes = [
                 "amount": "1/4 cup"
             }
         ],
-        "directions": [
+        "instructions": [
             "In a large pot, heat the olive oil over medium heat.",
             "Add the sausage and cook until browned, about 8 minutes.",
             "Remove the sausage from the pot and set aside.",
@@ -5970,7 +5970,7 @@ export const recipes = [
                 "amount": "4 cups"
             }
         ],
-        "directions": [
+        "instructions": [
             "Press the tofu for at least 15 minutes to remove excess moisture.",
             "Cut the tofu into 1-inch cubes.",
             "In a bowl, mix the cornstarch and 1 tsp of salt.",
@@ -6057,7 +6057,7 @@ export const recipes = [
                 "amount": "1/2 tsp"
             }
         ],
-        "directions": [
+        "instructions": [
             "In a saucepan, heat the chicken broth until it simmers.",
             "Reduce heat to low and keep the broth warm.",
             "In a separate saucepan, heat the olive oil and butter over medium heat.",
@@ -6201,7 +6201,7 @@ export const recipes = [
                 "amount": "1 cup"
             }
         ],
-        "directions": [
+        "instructions": [
             "Preheat oven to 300°F.",
             "Mix together salt, pepper, brown sugar, chili powder, paprika, garlic powder, and onion powder in a bowl.",
             "Rub the mixture over the spareribs, making sure they are well coated.",
@@ -6528,7 +6528,7 @@ export const recipes = [
                 "amount": "1/2 cup"
             }
         ],
-        "directions": [
+        "instructions": [
             "Heat the olive oil in a large saucepan over medium heat.",
             "Add the onion and garlic and cook until softened, about 5 minutes.",
             "Stir in the arborio rice until well coated with the oil.",
@@ -7116,7 +7116,7 @@ export const recipes = [
                 "amount": "1/4 cup"
             }
         ],
-        "directions": [
+        "instructions": [
             "Preheat oven to 375°F.",
             "In a large skillet, cook ground beef over medium heat until browned.",
             "Drain any excess fat and stir in taco seasoning and diced tomatoes and green chilies.",

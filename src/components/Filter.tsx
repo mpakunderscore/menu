@@ -7,13 +7,17 @@ import '../css/filter.css'
 const Filter = (props) => {
 
     let [filterItems, setFilterItems] = useState([
-        {title: 'your Favorites', name: 'favorites'},
-        {title: 'good Soup', name: 'soup'},
-        {title: 'late Breakfast', name: 'breakfast'},
-        {title: 'Easy make', name: 'easy'},
-        {title: 'i want Dessert', name: 'dessert'},
-        {title: 'is it Veg?', name: 'veg'},
+        {title: 'Favorites', name: 'favorites'},
+        {title: 'Easy', name: 'easy'},
+        {title: 'Breakfast', name: 'breakfast'},
+        {title: 'Vegetarian', name: 'vegetarian'},
+        {title: 'Settings', name: 'settings'},
     ])
+
+    let useFilter = (name) => {
+
+
+    }
 
     useEffect(() => {
         // let userRecipes = shuffleArray(newRecipes.tsx)
@@ -29,10 +33,13 @@ const Filter = (props) => {
                 let itemTitle = filterItems[i] ? filterItems[i].title.toUpperCase() : 'NO TITLE'
                 let hover = false
                 return <div key={i}
-                            className={hover ? 'hover' : ''}
+                            className={'button ' + (hover ? 'hover' : '')}
                             onTouchStart={() => hover = true}
                             onTouchEnd={() => hover = false}
-                            onClick={() => props.setFilter(filterItems[i].name)}>
+                            onClick={() => {
+                                useFilter(filterItems[i].name)
+                                props.setFilter(filterItems[i].name)
+                            }}>
                     <div className={'title'}>{itemTitle}</div>
                     {/*<img title={userRecipes[i].name} src={'./images/food/' + userRecipes[i].image}/>*/}
                 </div>

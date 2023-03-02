@@ -34,7 +34,7 @@ const Recipe = (props) => {
     return (
         <div id={'recipe'}>
             <div className={'image ' +  + (active ? 'active' : '')}>
-                <img title={title} src={'./images/food/' + recipe.image}/>
+                <img title={title} src={'./images/recipes/food/' + recipe.image.toLowerCase()}/>
             </div>
             <div className={'block ' + (active ? 'active' : '')}>
                 <div className={'title'}>

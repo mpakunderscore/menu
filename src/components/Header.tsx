@@ -39,7 +39,7 @@ const Header = (props) => {
             setMenuState(1)
 
         } else if (props.isFilter) {
-            setMenuState(0)
+            // setMenuState(0)
         }
     }
 

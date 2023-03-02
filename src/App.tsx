@@ -170,7 +170,7 @@ function App() {
     }, [])
 
     return (
-        <div id={'app'} className={'shadow-big'}>
+        <div id={'app'}>
             <Header isFilter={isFilter}
                     setIsFilter={setIsFilter}
                     isFridge={isFridge}
