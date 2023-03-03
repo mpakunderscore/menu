@@ -10,6 +10,8 @@ import { createGesture, Gesture } from '@ionic/react';
 import Header from "./components/Header";
 import Filter from "./components/Filter";
 import Fridge from "./components/Fridge";
+import {getFavorites} from "./utils/storage";
+import recipe from "./components/recipe/Recipe";
 
 let uuid = require("uuid");
 
@@ -133,9 +135,28 @@ function App() {
 
             if (velocityX > 1) {
                 console.log('BACK')
-                setCurrentRecipe(null)
-                setIsFilter(false)
-                setIsFridge(false)
+
+                // console.log(currentRecipe)
+
+                if (currentRecipe !== false) {
+                    setCurrentRecipe(false)
+                } else if (!isFridge && !isFilter) {
+                    setIsFilter(true)
+                    setIsFridge(false)
+                } else {
+                    setIsFridge(false)
+                }
+            }
+
+            if (velocityX < -1) {
+                console.log(velocityX)
+                console.log(isFilter)
+                if (isFilter) {
+                    setIsFilter(false)
+                    setIsFridge(false)
+                } else {
+                    setIsFridge(true)
+                }
             }
 
             // console.log({type, currentX, deltaX, velocityX})
@@ -160,14 +181,28 @@ function App() {
 
     // let appInitKey
 
+
+    let [filterState, setFilterState] = useState({})
+    let [whiteList, setWhiteList] = useState({})
+
     let setFilter = (name) => {
+
+        filterState[name] = !filterState[name]
+        setFilterState({...filterState})
+
+        if (name === 'favorites' && filterState[name]) {
+            setWhiteList(getFavorites())
+        } else {
+            setWhiteList({})
+        }
+
         console.log(name)
     }
 
     useEffect(() => {
         // initPWA()
         initGestures()
-    }, [])
+    }, [currentRecipe, isFilter, isFridge])
 
     return (
         <div id={'app'}>
@@ -176,9 +211,9 @@ function App() {
                     isFridge={isFridge}
                     setIsFridge={setIsFridge}
             />
-            {!isFridge && <Food setCurrentRecipe={setCurrentRecipe}/>}
-            {!currentRecipe && isFilter && !isFridge && <Filter setFilter={setFilter}/>}
-            {!currentRecipe && isFridge && <Fridge/>}
+            {!isFridge && <Food setCurrentRecipe={setCurrentRecipe} whiteList={whiteList} filterState={filterState}/>}
+            {!currentRecipe && isFilter && !isFridge && <Filter filterState={filterState} setFilter={setFilter} setIsFilter={setIsFilter}/>}
+            {!currentRecipe && isFridge && <Fridge />}
             {currentRecipe && <Recipe currentRecipe={currentRecipe} setCurrentRecipe={setCurrentRecipe}/>}
         </div>
     );

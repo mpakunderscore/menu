@@ -1,3 +1,5 @@
+import {listTags} from "./tags";
+
 export const recipes = [
     {
         "id": 1,
@@ -8666,9 +8668,12 @@ let getItems = () => {
 
     let ingredients = {}
 
+    let globalNames = []
+
     let globalRecipes = recipes
     globalRecipes.map((recipe, i) => {
 
+        globalNames.push(globalRecipes[i].name)
         // console.log(globalRecipes[i].name)
         // console.log(globalRecipes[i].ingredients)
 
@@ -8687,7 +8692,13 @@ let getItems = () => {
                 ingredients[name] = 1
             }
         })
+
+        // globalRecipes[i].tags = listTags.find(item => item.recipe = globalRecipes[i].name).tags
     })
+
+    console.log(globalRecipes)
+
+    console.log(globalNames)
 
     // console.log(ingredients)
 

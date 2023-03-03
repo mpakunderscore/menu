@@ -55,7 +55,7 @@ const Fridge = (props) => {
             sortedIngredients['NO TYPE'].map(item => {
                 itemsLeft.push(item.name)
             })
-            console.log(itemsLeft)
+            // console.log(itemsLeft)
         })
 
         // let userRecipes = shuffleArray(newRecipes.tsx)

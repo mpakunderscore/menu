@@ -32,8 +32,13 @@
 }
 
 #header span.active {
-    font-size: 20px;
+    /*font-size: 20px;*/
     opacity: 1;
+    /*color: greenyellow;*/
+}
+
+#header span:last-child.active {
+    color: #85b0da;
 }
 
 #header.open {
