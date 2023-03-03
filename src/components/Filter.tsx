@@ -6,15 +6,20 @@ import '../css/filter.css'
 
 const Filter = (props) => {
 
+    const inputRef = useRef(null)
+
     let [filterItems, setFilterItems] = useState([
+        // {title: 'Search', name: 'search', color: 'rgb(59,114,255)'},
         {title: 'Favorites', name: 'favorites', color: 'gold'},
         {title: 'Vegetarian', name: 'vegetarian', color: 'greenyellow'},
-        {title: 'Breakfast', name: 'breakfast', color: 'orange'},
         {title: 'Easy', name: 'easy', color: 'lightgreen'},
+        {title: 'Breakfast', name: 'breakfast', color: 'orange'},
+
         // {title: 'Cuisine', name: 'cuisine', color: 'red'},
         // {title: 'Week', name: 'week', color: 'dodgerblue'},
         // {title: 'Settings', name: 'settings', color: 'black'},
-        // {title: 'About', name: 'about', color: 'black'},
+
+        {title: 'Generate', name: 'about', color: 'black'},
     ])
 
     let useFilter = (name) => {
@@ -24,10 +29,12 @@ const Filter = (props) => {
             props.setIsFilter(false)
         }
 
-        if (name === 'easy') {
-
+        if (name === 'search') {
+            inputRef.current.focus()
         }
     }
+
+    // let [searchText, setSearchText] = useState(props.searchText)
 
     useEffect(() => {
         // let userRecipes = shuffleArray(newRecipes.tsx)
@@ -41,6 +48,14 @@ const Filter = (props) => {
 
     return (
         <div id={'filter'}>
+            <input ref={inputRef}
+                                                // autoFocus={true}
+                                                className={'search'}
+                                                placeholder={'SEARCH'}
+                                                value={props.searchText}
+                                                onChange={e => props.setSearchText(e.target.value)}
+            />
+
             {filterItems.map((item, i) => {
                 let itemTitle = filterItems[i] ? filterItems[i].title.toUpperCase() : 'NO TITLE'
                 let hover = false

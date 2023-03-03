@@ -22,6 +22,17 @@ export let getFavorites = () => {
     return getItem(names.FAVORITES)
 }
 
+export let getFavoritesTrue = () => {
+
+    let favorites = {}
+    for (const [key, value] of Object.entries(getItem(names.FAVORITES))) {
+        if (value) {
+            favorites[key] = true
+        }
+    }
+    return favorites
+}
+
 export let setIngredient = (id, value) => {
     let favorites = getItem(names.INGREDIENTS)
     favorites[id] = value

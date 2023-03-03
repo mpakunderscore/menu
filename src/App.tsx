@@ -10,7 +10,7 @@ import { createGesture, Gesture } from '@ionic/react';
 import Header from "./components/Header";
 import Filter from "./components/Filter";
 import Fridge from "./components/Fridge";
-import {getFavorites} from "./utils/storage";
+import {getFavorites, getFavoritesTrue} from "./utils/storage";
 import recipe from "./components/recipe/Recipe";
 
 let uuid = require("uuid");
@@ -154,7 +154,7 @@ function App() {
                 if (isFilter) {
                     setIsFilter(false)
                     setIsFridge(false)
-                } else {
+                } else if (currentRecipe === false) {
                     setIsFridge(true)
                 }
             }
@@ -184,14 +184,15 @@ function App() {
 
     let [filterState, setFilterState] = useState({})
     let [whiteList, setWhiteList] = useState({})
+    let [searchText, setSearchText] = useState('')
 
     let setFilter = (name) => {
 
         filterState[name] = !filterState[name]
         setFilterState({...filterState})
 
-        if (name === 'favorites' && filterState[name]) {
-            setWhiteList(getFavorites())
+        if (name === 'favorites') {
+            setWhiteList(getFavoritesTrue())
         } else {
             setWhiteList({})
         }
@@ -211,8 +212,18 @@ function App() {
                     isFridge={isFridge}
                     setIsFridge={setIsFridge}
             />
-            {!isFridge && <Food setCurrentRecipe={setCurrentRecipe} whiteList={whiteList} filterState={filterState}/>}
-            {!currentRecipe && isFilter && !isFridge && <Filter filterState={filterState} setFilter={setFilter} setIsFilter={setIsFilter}/>}
+            {!isFridge && <Food setCurrentRecipe={setCurrentRecipe}
+                                whiteList={whiteList}
+                                filterState={filterState}
+                                searchText={searchText}
+            />}
+            {!currentRecipe && isFilter && !isFridge && <Filter
+                filterState={filterState}
+                setFilter={setFilter}
+                setIsFilter={setIsFilter}
+                searchText={searchText}
+                setSearchText={setSearchText}
+            />}
             {!currentRecipe && isFridge && <Fridge />}
             {currentRecipe && <Recipe currentRecipe={currentRecipe} setCurrentRecipe={setCurrentRecipe}/>}
         </div>

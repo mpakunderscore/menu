@@ -11,7 +11,9 @@ let action2 = 'FRIDGE'
 const Header = (props) => {
 
     // let [userRecipes, setUserRecipes] = useState([])
+
     let [menuState, setMenuState] = useState(1)
+
     let [oldScroll, setOldScroll] = useState(0)
 
     const [direction, setDirection] = useState('up');
@@ -25,7 +27,6 @@ const Header = (props) => {
         }
         setOldScroll(height)
     }
-
 
     useEffect(() => {
         document.querySelector('#app').addEventListener('scroll', function () {
@@ -64,7 +65,7 @@ const Header = (props) => {
     }
 
     return (
-        <div id={'header'} className={(menuState === 1 ? 'open' : '')} onClick={() => clickMenu()}>
+        <div id={'header'} className={(menuState === 1 || props.isFilter ? 'open' : '')} onClick={() => clickMenu()}>
             <span className={(props.isFilter ? 'active' : '')} onClick={() => clickAction1()}>{action1}</span>
             {appName}
             <span className={(props.isFridge ? 'active' : '')} onClick={() => clickAction2()}>{action2}</span>

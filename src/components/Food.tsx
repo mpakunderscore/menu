@@ -15,6 +15,10 @@ const shuffleArray = array => {
     return array
 }
 
+const orderArray = array => {
+    return array
+}
+
 declare var VERSION: string;
 
 const Food = (props) => {
@@ -28,8 +32,11 @@ const Food = (props) => {
             recipe['tags'] = listTags.find(item => item.recipe === recipe.name).tags
         })
 
-        let userRecipes = shuffleArray(recipes)
-        // let userRecipes = recipes
+        // TODO
+        // let userRecipes = shuffleArray(recipes)
+        let userRecipes = orderArray(recipes)
+
+
         console.log(userRecipes.length)
         console.log(userRecipes)
         // userRecipes.unshift({name: 'FAVORITES', image: '', ingredients: [], instructions: [], hints: []})
@@ -52,6 +59,12 @@ const Food = (props) => {
             })
         }
 
+        if (props.filterState.search) {
+            userRecipes = userRecipes.filter(recipe => {
+                return recipe.name.includes(props.searchText)
+            })
+        }
+
         if (Object.keys(props.whiteList).length !== 0 && props.filterState.favorites) {
             userRecipes = userRecipes.filter(recipe => {
                 // console.log(recipe.id)
@@ -62,7 +75,7 @@ const Food = (props) => {
 
         setUserRecipes(userRecipes)
 
-    }, [props.whiteList])
+    }, [props.filterState, props.whiteList, props.searchText])
 
     return (
         <div id={'food'}>

@@ -15,6 +15,22 @@
     overflow-y: scroll;
 }
 
+#fridge {
+    /*bottom: 15%;*/
+    /*position: absolute;*/
+    -webkit-animation: ease-out;
+    -webkit-animation-name: opacityToOne;
+    -webkit-animation-duration: .5s;
+}
+@-webkit-keyframes opacityToOne {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 #fridge > div.grid {
     width: 100%;
     display: flex;

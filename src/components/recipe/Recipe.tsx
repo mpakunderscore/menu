@@ -46,7 +46,7 @@ const Recipe = (props) => {
                               className={"material-symbols-outlined" + (favorite ? ' favorite' : '')}>favorite</span>
                     </div>
                 </div>
-                <div className={'tags'}>{recipe.tags.join(', ').toUpperCase()}</div>
+                <div className={'tags'}>{'' + recipe.id + ' ' + recipe.tags.join(', ').toUpperCase()}</div>
                 <RecipeText currentRecipe={recipe}/>
             </div>
             <div className={'buttons'}>
