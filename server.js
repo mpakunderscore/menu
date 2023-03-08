@@ -4,6 +4,7 @@ let path = require('path')
 // const google = require("./server/google");
 let app = express()
 const cors = require('cors')
+const {initAPI} = require("./server/api");
 
 app.use(express.json())
 app.use(cors())
@@ -14,7 +15,7 @@ server.listen(port)
 
 require('dotenv').config()
 
-// initAPI(app).then(r => {})
+initAPI(app).then(r => {})
 
 // google.readGoogleTable().then(r => {})
 

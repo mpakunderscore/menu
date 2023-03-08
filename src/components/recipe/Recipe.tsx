@@ -3,6 +3,7 @@ import '../../css/recipe.css'
 import RecipeText from "./RecipeText";
 import {names} from "../../utils/names";
 import {getFavorite, setFavorites} from "../../utils/storage";
+import {getData, sendData} from "../../utils/api";
 
 const Recipe = (props) => {
 
@@ -25,10 +26,11 @@ const Recipe = (props) => {
 
     }
 
-    let saveFavorites = () => {
+    let saveFavorites = async () => {
         console.log()
         setFavorite(!favorite)
         setFavorites(recipe.id, !favorite)
+        await sendData('/api/like/', recipe)
     }
 
     return (
@@ -46,7 +48,7 @@ const Recipe = (props) => {
                               className={"material-symbols-outlined" + (favorite ? ' favorite' : '')}>favorite</span>
                     </div>
                 </div>
-                <div className={'tags'}>{'' + recipe.id + ' ' + recipe.tags.join(', ').toUpperCase()}</div>
+                <div className={'tags'}>{recipe.tags.join(', ').toUpperCase() + ' ID:' + recipe.id}</div>
                 <RecipeText currentRecipe={recipe}/>
             </div>
             <div className={'buttons'}>

@@ -53,7 +53,10 @@ const Filter = (props) => {
                                                 className={'search'}
                                                 placeholder={'SEARCH'}
                                                 value={props.searchText}
-                                                onChange={e => props.setSearchText(e.target.value)}
+                                                onChange={e => {
+                                                    console.log(e.target.value)
+                                                    props.setSearchText(e.target.value)
+                                                }}
             />
 
             {filterItems.map((item, i) => {

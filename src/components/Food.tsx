@@ -59,10 +59,10 @@ const Food = (props) => {
             })
         }
 
-        if (props.filterState.search) {
+        if (props.searchText) {
             console.log(props.searchText)
             userRecipes = userRecipes.filter(recipe => {
-                return recipe.name.includes(props.searchText)
+                return recipe.name.toLowerCase().includes(props.searchText.toLowerCase())
             })
         }
 
@@ -76,7 +76,7 @@ const Food = (props) => {
 
         setUserRecipes(userRecipes)
 
-    }, [userRecipes, props.filterState, props.whiteList, props.searchText])
+    }, [props.filterState, props.whiteList, props.searchText])
 
     return (
         <div id={'food'}>

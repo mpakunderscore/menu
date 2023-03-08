@@ -20,11 +20,12 @@ const Fridge = (props) => {
     useEffect(() => {
 
         let sortedIngredients = {'NO TYPE': []}
-        ingredientsObjects.map((item, i) => {
+        ingredientsObjects.filter(item => item.count > 6).map((item, i) => {
 
             let name = ingredientsObjects[i].name
                 .split('(')[0]
                 .split(',')[0]
+
             let type = ingredientsType[name]
 
             ingredientsObjects[i].name = name
