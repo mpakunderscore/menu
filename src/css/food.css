@@ -5,7 +5,7 @@
 #food {
     position: relative;
     width: 100%;
-    padding-top: 50px;
+    padding-top: 60px;
     background: black;
     display: flex;
     flex-direction: row;

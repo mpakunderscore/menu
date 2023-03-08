@@ -47,6 +47,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 body {
+    padding-top: env(safe-area-inset-top) !important;
+}
+
+#header {
+    /*padding-top: env(safe-area-inset-top) !important;*/
+}
+
+body {
     display: flex;
     flex-direction: column;
     align-items: center;

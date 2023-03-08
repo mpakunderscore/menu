@@ -5477,7 +5477,7 @@ export const recipes = [
                 "unit": "tablespoons"
             }
         ],
-        "Instructions": [
+        "instructions": [
             "Preheat grill to medium-high heat.",
             "Brush chicken breasts with olive oil and season with salt and pepper.",
             "Grill chicken for 5-7 minutes on each side or until fully cooked.",

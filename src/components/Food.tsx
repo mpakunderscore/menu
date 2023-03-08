@@ -16,7 +16,8 @@ const shuffleArray = array => {
 }
 
 const orderArray = array => {
-    return array
+
+    return array.sort((a, b) => b['likes'] - a['likes']).filter(item => item.likes > 0)
 }
 
 declare var VERSION: string;
@@ -29,13 +30,31 @@ const Food = (props) => {
 
         recipes.map((recipe, i) => {
             // console.log(recipe.name)
+
             recipe['tags'] = listTags.find(item => item.recipe === recipe.name).tags
+
+            recipe['likes'] = 5
+
+            if (recipe.instructions.length === 0 || typeof recipe.instructions[0] !== 'string') {
+                // console.error('RECIPE ERROR')
+                // console.warn(recipe.name)
+                console.warn(recipe.id)
+
+                recipe['likes'] = -1
+            }
+
+            if (recipe.id < 22) {
+                recipe['likes'] = 2
+            }
         })
+
+        // console.log(recipes)
 
         // TODO
         // let userRecipes = shuffleArray(recipes)
         let userRecipes = orderArray(recipes)
 
+        // console.log(userRecipes)
 
         // console.log(userRecipes.length)
         // console.log(userRecipes)

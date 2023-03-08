@@ -1,6 +1,6 @@
 {
     "name": "amenu",
-    "version": "0.6.4",
+    "version": "0.6.5",
     "description": "AMENU",
     "main": "server.js",
     "scripts": {
@@ -42,6 +42,7 @@
         "@capacitor/haptics": "^4.0.1",
         "@capacitor/keyboard": "^4.0.1",
         "@capacitor/share": "^4.0.1",
+        "@capacitor/status-bar": "^4.1.1",
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.5.0",
         "@testing-library/user-event": "^7.2.1",
