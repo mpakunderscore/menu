@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import Food from './components/Food'
 
+import { App as AppCapacitor } from '@capacitor/app';
+
+
 import './css/index.css'
 import { StatusBar, Style } from '@capacitor/status-bar';
 import {Capacitor} from "@capacitor/core";
@@ -132,6 +135,7 @@ function App() {
             const currentX = detail.currentX;
             const deltaX = detail.deltaX;
             const velocityX = detail.velocityX;
+            const velocityY = detail.velocityY;
 
             if (velocityX > 1) {
                 console.log('BACK')
@@ -156,6 +160,15 @@ function App() {
                     setIsFridge(false)
                 } else if (currentRecipe === false) {
                     setIsFridge(true)
+                }
+            }
+
+            if (velocityY < -1) {
+                console.log(velocityX)
+                console.log(isFilter)
+                if (isFilter) {
+                    setIsFilter(false)
+                    setIsFridge(false)
                 }
             }
 
@@ -201,6 +214,21 @@ function App() {
     }
 
     useEffect(() => {
+        AppCapacitor.addListener('backButton', () => {
+
+            if (isFridge) {
+                setIsFridge(false)
+            }
+
+            if (currentRecipe) {
+                setCurrentRecipe(false)
+            }
+
+            // else if (!isFilter) {
+            //     setIsFilter(true)
+            // }
+        })
+
         // initPWA()
         initGestures()
     }, [currentRecipe, isFilter, isFridge])

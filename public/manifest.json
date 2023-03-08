@@ -1,7 +1,7 @@
 {
-  "name": "Menu",
-  "short_name": "Menu",
-  "description": "Menu",
+  "name": "AMENU",
+  "short_name": "AMENU",
+  "description": "AMENU",
   "manifest_version": 2,
   "start_url": "/?source=pwa",
   "scope": "/",

@@ -28,7 +28,7 @@ const Food = (props) => {
     useEffect(() => {
 
         recipes.map((recipe, i) => {
-            console.log(recipe.name)
+            // console.log(recipe.name)
             recipe['tags'] = listTags.find(item => item.recipe === recipe.name).tags
         })
 
@@ -37,8 +37,8 @@ const Food = (props) => {
         let userRecipes = orderArray(recipes)
 
 
-        console.log(userRecipes.length)
-        console.log(userRecipes)
+        // console.log(userRecipes.length)
+        // console.log(userRecipes)
         // userRecipes.unshift({name: 'FAVORITES', image: '', ingredients: [], instructions: [], hints: []})
 
         if (props.filterState.easy) {
@@ -60,6 +60,7 @@ const Food = (props) => {
         }
 
         if (props.filterState.search) {
+            console.log(props.searchText)
             userRecipes = userRecipes.filter(recipe => {
                 return recipe.name.includes(props.searchText)
             })
@@ -75,7 +76,7 @@ const Food = (props) => {
 
         setUserRecipes(userRecipes)
 
-    }, [props.filterState, props.whiteList, props.searchText])
+    }, [userRecipes, props.filterState, props.whiteList, props.searchText])
 
     return (
         <div id={'food'}>

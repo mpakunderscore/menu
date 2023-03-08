@@ -9,11 +9,14 @@
     height: 100%;
     padding-top: 50px;
     background: rgba(0, 0, 0, 0.7);
+    /*background: rgba(0, 0, 0, 1);*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     z-index: 2;
     backdrop-filter: blur(6px);
+
+    /*pointer-events: none;*/
 }
 
 #filter {
