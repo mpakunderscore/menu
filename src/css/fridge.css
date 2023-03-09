@@ -45,7 +45,7 @@
     top: 0;
     bottom: 0;
     /*overflow: scroll;*/
-    -webkit-animation: ease-out;
+    -webkit-animation: linear;
     -webkit-animation-name: moveFromRight;
     -webkit-animation-duration: .1s;
 }

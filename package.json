@@ -1,6 +1,6 @@
 {
     "name": "amenu",
-    "version": "0.6.6",
+    "version": "0.6.7",
     "description": "AMENU",
     "main": "server.js",
     "scripts": {
@@ -39,7 +39,7 @@
     },
     "dependencies": {
         "@capacitor/app": "^4.1.1",
-        "@capacitor/haptics": "^4.0.1",
+        "@capacitor/haptics": "^4.1.0",
         "@capacitor/keyboard": "^4.0.1",
         "@capacitor/share": "^4.0.1",
         "@capacitor/status-bar": "^4.1.1",

@@ -19,7 +19,7 @@ const Filter = (props) => {
         // {title: 'Week', name: 'week', color: 'dodgerblue'},
         // {title: 'Settings', name: 'settings', color: 'black'},
 
-        {title: 'Generate', name: 'about', color: 'red'},
+        {title: 'Plus', name: 'plus', color: 'red'},
     ])
 
     let useFilter = (name) => {

@@ -6,6 +6,7 @@ import '../css/fridge.css'
 import {colors, getSortedIngredients, ingredientsObjects} from "../data/ingredients";
 import {getIngredients, setIngredient} from "../utils/storage";
 import {ingredientsType} from "../data/types";
+import {Haptics, ImpactStyle} from "@capacitor/haptics";
 
 const fridgeText = 'Select ingredients you have for a new recipes'
 // const fridgeText = 'Select ingredients for a new recipes'
@@ -80,11 +81,19 @@ const Fridge = (props) => {
     }, [])
 
     let clickIngredient = (name) => {
-        // console.log(name)
+
+        haptics()
+        console.log(name)
         ingredientsActive[name] = !ingredientsActive[name]
         setIngredient(name, ingredientsActive[name])
         setIngredientsActive({...ingredientsActive})
         // console.log(ingredientsActive)
+    }
+
+    let haptics = () => {
+        Haptics.impact({style: ImpactStyle.Medium})
+        Haptics.vibrate()
+        Haptics.selectionStart()
     }
 
     return (

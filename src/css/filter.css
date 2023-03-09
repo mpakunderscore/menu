@@ -25,7 +25,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    -webkit-animation: ease-out;
+    -webkit-animation: linear;
     -webkit-animation-name: moveFromLeft;
     -webkit-animation-duration: .1s;
 }

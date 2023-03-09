@@ -106,7 +106,7 @@ const Food = (props) => {
                             onTouchEnd={() => hover = false}
                             onClick={() => props.setCurrentRecipe(userRecipes[i])}>
                     <div className={'title'}>{itemTitle}</div>
-                    <img loading="lazy" title={userRecipes[i].name} src={'./images/recipes/food/' + userRecipes[i].image.toLowerCase()} alt={''}/>
+                    <img title={userRecipes[i].name} src={'./images/recipes/food/' + userRecipes[i].image.toLowerCase()} alt={''}/>
                 </div>
             })}
             {userRecipes.length === 0 && <div>
