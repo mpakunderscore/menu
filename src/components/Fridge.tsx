@@ -152,9 +152,9 @@ const Fridge = (props) => {
             </div>
 
             <div className={'fridge-settings'}>
-                <div className={'active'}>NEWBIE</div>
-                <div className={userIngredientsCount >= 42 ? 'active' : ''}>COOK</div>
-                <div>CHEF</div>
+                <div className={'active'}>ONE</div>
+                <div className={userIngredientsCount >= 42 ? 'active' : ''}>TWO</div>
+                <div>THREE</div>
             </div>
 
             {types.map((type) => {
