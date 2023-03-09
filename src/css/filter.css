@@ -17,11 +17,14 @@
     backdrop-filter: blur(6px);
 
     /*pointer-events: none;*/
+
+    overflow: scroll;
 }
 
 #filter {
-    /*bottom: 15%;*/
     position: absolute;
+    top: 0;
+    bottom: 0;
     -webkit-animation: ease-out;
     -webkit-animation-name: moveFromLeft;
     -webkit-animation-duration: .1s;
@@ -88,7 +91,7 @@
     font-weight: 700;
     width: 100%;
 
-    padding: 26px;
+    /*padding: 26px;*/
 
     text-align: center;
     /*line-height: 100%;*/

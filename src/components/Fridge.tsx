@@ -7,6 +7,9 @@ import {colors, getSortedIngredients, ingredientsObjects} from "../data/ingredie
 import {getIngredients, setIngredient} from "../utils/storage";
 import {ingredientsType} from "../data/types";
 
+// const fridgeText = 'Select ingredients you have for a new recipes'
+const fridgeText = 'Select ingredients for a new recipes'
+
 const Fridge = (props) => {
 
     window.scrollTo(0, 0);
@@ -20,7 +23,7 @@ const Fridge = (props) => {
     useEffect(() => {
 
         let sortedIngredients = {'NO TYPE': []}
-        ingredientsObjects.filter(item => item.count > 6).map((item, i) => {
+        ingredientsObjects.filter(item => item.count > 2).map((item, i) => {
 
             let name = ingredientsObjects[i].name
                 .split('(')[0]
@@ -43,10 +46,16 @@ const Fridge = (props) => {
             setIngredientsByType(sortedIngredients)
             // console.log(sortedIngredients)
 
+
+
             // Object.entries(sortedIngredients)
             let sorted = Object.keys(sortedIngredients).sort(function(a,b) {
                 return sortedIngredients[b].length - sortedIngredients[a].length
             })
+
+            delete sorted[0]
+            sorted.push('spice')
+
             // Object.entries()
             // console.log(sorted)
             setTypes(sorted)
@@ -59,6 +68,9 @@ const Fridge = (props) => {
             // console.log(itemsLeft)
         })
 
+        let spices = sortedIngredients['spice']
+        console.log(spices)
+
         // let userRecipes = shuffleArray(newRecipes.tsx)
         // let userRecipes = newRecipes.tsx
         // console.log(userRecipes.length)
@@ -66,8 +78,6 @@ const Fridge = (props) => {
         // setFilterItems(userRecipes)
 
     }, [])
-
-    const fridgeText = 'Please select the ingredients you have and I will select the newRecipes.tsx for you'
 
     let clickIngredient = (name) => {
         // console.log(name)
@@ -80,11 +90,13 @@ const Fridge = (props) => {
     return (
         <div id={'fridge'}>
 
+            <div className={'fridge-description'}>{fridgeText.toUpperCase()}</div>
+
             {types.map((type) => {
 
                 return <div key={type} className={'grid'}>
 
-                    <p style={{color: 'white', margin: '20px'}}>{'THIS PAGE IS UNDER DEVELOPMENT / INGREDIENT DATA COLLECTION'}</p>
+                    {/*<p style={{color: 'white', margin: '20px'}}>{'THIS PAGE IS UNDER DEVELOPMENT / INGREDIENT DATA COLLECTION'}</p>*/}
 
                     <span>{type.toUpperCase() + 'S'}</span>
 
@@ -92,7 +104,7 @@ const Fridge = (props) => {
                         let itemTitle = ingredientsByType[type][i] ? ingredientsByType[type][i].name.toUpperCase() : 'NO TITLE'
                         let hover = false
                         let active = ingredientsActive[ingredientsByType[type][i].name]
-                        let color = colors[ingredientsByType[type][i].name] ? colors[ingredientsByType[type][i].name] : '#e128e1'
+                        let color = colors[ingredientsByType[type][i].name] ? colors[ingredientsByType[type][i].name] : '#00ffda'
                         return <div key={i}
                                     className={(active ? 'active' : '') + (hover ? ' hover' : '')}
                                     style={{background: (active ? '#202020' : '')}}
@@ -106,6 +118,7 @@ const Fridge = (props) => {
 
                 </div>
             })}
+
         </div>
     )
 }

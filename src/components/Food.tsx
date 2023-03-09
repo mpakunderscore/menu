@@ -85,12 +85,10 @@ const Food = (props) => {
             })
         }
 
-        if (Object.keys(props.whiteList).length !== 0 && props.filterState.favorites) {
+        if (props.filterState.favorites) {
             userRecipes = userRecipes.filter(recipe => {
-                // console.log(recipe.id)
                 return props.whiteList.hasOwnProperty(recipe.id)
             })
-            // console.log(props.whiteList)
         }
 
         setUserRecipes(userRecipes)

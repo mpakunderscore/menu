@@ -19,18 +19,19 @@ const Filter = (props) => {
         // {title: 'Week', name: 'week', color: 'dodgerblue'},
         // {title: 'Settings', name: 'settings', color: 'black'},
 
-        {title: 'Generate', name: 'about', color: 'black'},
+        {title: 'Generate', name: 'about', color: 'red'},
     ])
 
     let useFilter = (name) => {
 
         props.setFilter(name)
+
         if (name === 'favorites') {
-            props.setIsFilter(false)
+            // props.setIsFilter(false)
         }
 
         if (name === 'search') {
-            inputRef.current.focus()
+            // inputRef.current.focus()
         }
     }
 

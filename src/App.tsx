@@ -240,7 +240,7 @@ function App() {
                     isFridge={isFridge}
                     setIsFridge={setIsFridge}
             />
-            {!isFridge && <Food setCurrentRecipe={setCurrentRecipe}
+            {<Food setCurrentRecipe={setCurrentRecipe}
                                 whiteList={whiteList}
                                 filterState={filterState}
                                 searchText={searchText}
