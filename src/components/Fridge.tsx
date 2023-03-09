@@ -7,8 +7,8 @@ import {colors, getSortedIngredients, ingredientsObjects} from "../data/ingredie
 import {getIngredients, setIngredient} from "../utils/storage";
 import {ingredientsType} from "../data/types";
 
-// const fridgeText = 'Select ingredients you have for a new recipes'
-const fridgeText = 'Select ingredients for a new recipes'
+const fridgeText = 'Select ingredients you have for a new recipes'
+// const fridgeText = 'Select ingredients for a new recipes'
 
 const Fridge = (props) => {
 

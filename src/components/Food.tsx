@@ -109,6 +109,9 @@ const Food = (props) => {
                     <img loading="lazy" title={userRecipes[i].name} src={'./images/recipes/food/' + userRecipes[i].image.toLowerCase()} alt={''}/>
                 </div>
             })}
+            {userRecipes.length === 0 && <div>
+                <div className={'title'}>{'EMPTY'}</div>
+            </div>}
             <div id={'version'}>
                 <div>{VERSION}</div>
             </div>

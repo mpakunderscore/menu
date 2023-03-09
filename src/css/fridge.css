@@ -66,6 +66,7 @@
     justify-content: center;
     /*padding-left: 2.5%;*/
     /*padding-right: 2.5%;*/
+    margin-bottom: 1.25%;
 }
 
 #fridge div.grid > span {
@@ -75,8 +76,12 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 50px;
-    color: whitesmoke;
+    /*color: whitesmoke;*/
     text-align: right;
+
+    background-color: whitesmoke;
+    color: black;
+    margin-bottom: 1.25%;
 }
 
 #fridge div.grid > div {
