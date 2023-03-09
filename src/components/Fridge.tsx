@@ -11,6 +11,11 @@ import {Haptics, ImpactStyle} from "@capacitor/haptics";
 const fridgeText = 'Select ingredients you have for a new recipes'
 // const fridgeText = 'Select ingredients for a new recipes'
 
+let NEWBIE_FILTER = 5
+let COOK_FILTER = 3
+
+let COOK_ITEMS = 42
+
 const Fridge = (props) => {
 
     window.scrollTo(0, 0);
@@ -18,13 +23,23 @@ const Fridge = (props) => {
     let [ingredients, setIngredients] = useState([])
     let [ingredientsActive, setIngredientsActive] = useState(getIngredients())
 
+
+
     let [ingredientsByType, setIngredientsByType] = useState({})
     let [types, setTypes] = useState([])
 
+    // TODO
+    let [filterCount, setFilterCount] = useState(NEWBIE_FILTER)
+
+    let [ingredientsCount, setIngredientsCount] = useState(0)
+    let [userIngredientsCount, setUserIngredientsCount] = useState(0)
+
     useEffect(() => {
 
+        let count = 0
+
         let sortedIngredients = {'NO TYPE': []}
-        ingredientsObjects.filter(item => item.count > 2).map((item, i) => {
+        ingredientsObjects.filter(item => item.count > filterCount).map((item, i) => {
 
             let name = ingredientsObjects[i].name
                 .split('(')[0]
@@ -66,8 +81,21 @@ const Fridge = (props) => {
             sortedIngredients['NO TYPE'].map(item => {
                 itemsLeft.push(item.name)
             })
+
+
             // console.log(itemsLeft)
+
+            count++
         })
+
+        Object.keys(sortedIngredients).map(key => {
+            if (sortedIngredients[key].length === 1) {
+                delete sortedIngredients[key]
+                count--
+            }
+        })
+
+        setIngredientsCount(count)
 
         let spices = sortedIngredients['spice']
         console.log(spices)
@@ -78,7 +106,18 @@ const Fridge = (props) => {
         // userRecipes.unshift({name: 'FAVORITES', image: '', ingredients: [], instructions: [], hints: []})
         // setFilterItems(userRecipes)
 
-    }, [])
+
+        let userCount = Object.keys(ingredientsActive).filter(key => ingredientsActive[key] === true).length
+        setUserIngredientsCount(userCount)
+
+        console.log(userCount)
+        console.log(filterCount)
+        if (userCount >= COOK_ITEMS && filterCount !== COOK_FILTER) {
+            console.log(COOK_FILTER)
+            setFilterCount(COOK_FILTER)
+        }
+
+    }, [userIngredientsCount, filterCount, ingredientsCount])
 
     let clickIngredient = (name) => {
 
@@ -88,6 +127,9 @@ const Fridge = (props) => {
         setIngredient(name, ingredientsActive[name])
         setIngredientsActive({...ingredientsActive})
         // console.log(ingredientsActive)
+
+        let userCount = Object.keys(ingredientsActive).filter(key => ingredientsActive[key] === true).length
+        setUserIngredientsCount(userCount)
     }
 
     let haptics = () => {
@@ -96,10 +138,24 @@ const Fridge = (props) => {
         Haptics.selectionStart()
     }
 
+    // console.log(Object.keys(ingredientsActive).filter(key => ingredientsActive[key] === true).length)
+
+    // let userCount = Object.keys(ingredientsActive).filter(key => ingredientsActive[key] === true).length
+
     return (
         <div id={'fridge'}>
 
             <div className={'fridge-description'}>{fridgeText.toUpperCase()}</div>
+
+            <div className={'fridge-score'}>
+                <div>UNLOCKED: {userIngredientsCount + ' / ' + ingredientsCount}</div>
+            </div>
+
+            <div className={'fridge-settings'}>
+                <div className={'active'}>NEWBIE</div>
+                <div className={userIngredientsCount >= 42 ? 'active' : ''}>COOK</div>
+                <div>CHEF</div>
+            </div>
 
             {types.map((type) => {
 
@@ -113,7 +169,7 @@ const Fridge = (props) => {
                         let itemTitle = ingredientsByType[type][i] ? ingredientsByType[type][i].name.toUpperCase() : 'NO TITLE'
                         let hover = false
                         let active = ingredientsActive[ingredientsByType[type][i].name]
-                        let color = colors[ingredientsByType[type][i].name] ? colors[ingredientsByType[type][i].name] : '#00ffda'
+                        let color = colors[ingredientsByType[type][i].name] ? colors[ingredientsByType[type][i].name] : '#ffffff'
                         return <div key={i}
                                     className={(active ? 'active' : '') + (hover ? ' hover' : '')}
                                     style={{background: (active ? '#202020' : '')}}

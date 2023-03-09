@@ -65,7 +65,7 @@ const Header = (props) => {
     }
 
     return (
-        <div id={'header'} className={(menuState === 1 || props.isFilter ? 'open' : '')} onClick={() => clickMenu()}>
+        <div id={'header'} className={((menuState === 1 || props.isFilter) && !props.isFridge ? 'open' : '')} onClick={() => clickMenu()}>
             <span className={(props.isFilter ? 'active' : '')} onClick={() => clickAction1()}>{action1}</span>
             {appName}
             <span className={(props.isFridge ? 'active' : '')} onClick={() => clickAction2()}>{action2}</span>

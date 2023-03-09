@@ -24,6 +24,34 @@
     text-align: right;
 }
 
+.fridge-score {
+    color: ghostwhite;
+    font-weight: 700;
+    margin-left: 40px;
+}
+
+.fridge-settings {
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*color: whitesmoke;*/
+}
+
+.fridge-settings div {
+    font-size: 26px;
+    margin: 10px;
+    font-weight: 700;
+    color: whitesmoke;
+    opacity: .1;
+}
+
+.fridge-settings div.active {
+    opacity: .9;
+}
+
+
+
 /*#fridge {*/
 /*    !*bottom: 15%;*!*/
 /*    !*position: absolute;*!*/
@@ -121,10 +149,10 @@
 
     font-size: 14px;
     font-weight: 700;
-    width: 80%;
+    width: 100%;
 
     /*padding: 10px;*/
-    margin: 10%;
+    /*margin: 10%;*/
 
     text-align: center;
     /*line-height: 100%;*/
