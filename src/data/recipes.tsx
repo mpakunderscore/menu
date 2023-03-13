@@ -8661,6 +8661,43 @@ export const recipes = [
             "You can also add some hot sauce or mustard for added flavor.",
             "You can also bake in the oven at 350F (175C) for 15-20 minutes for a crispy top."
         ]
+    },
+    {
+        "id": 133,
+        "name": "Beetroot and Goat Cheese Tart",
+        "image": "133_beetroot_and_goat_cheese_tart.png",
+        "ingredients": [
+            {"name": "beetroot", "amount": "3 medium-sized, peeled and thinly sliced"},
+            {"name": "goat cheese", "amount": "100g, crumbled"},
+            {"name": "butter", "amount": "2 tbsp"},
+            {"name": "red onion", "amount": "1 medium-sized, sliced"},
+            {"name": "eggs", "amount": "2"},
+            {"name": "milk", "amount": "300ml"},
+            {"name": "flour", "amount": "150g"},
+            {"name": "salt and pepper", "amount": "to taste"}
+        ],
+        "hints": [
+            "To make the base, pulse the flour and butter together in a food processor until it resembles breadcrumbs.",
+            "Press the mixture into a greased tart tin to create the base.",
+            "Use a fork to prick the base evenly all over before baking for 15 minutes.",
+            "For the filling, whisk together the eggs and milk in a jug and season well with salt and pepper.",
+            "Arrange the sliced beetroots and red onion over the baked base and pour in the egg and milk mixture.",
+            "Crumble the goat cheese over the top and bake for 25-30 minutes, or until the filling is set."
+        ],
+        "instructions": [
+            "Preheat the oven to 200C/400F/Gas 6.",
+            "To make the base, pulse the flour and butter together in a food processor until it resembles breadcrumbs.",
+            "Add a pinch of salt and gradually add enough cold water to bring the mixture together into a ball of dough.",
+            "Roll the dough out on a floured work surface and use it to line a greased, 23cm tart tin.",
+            "Trim off any excess dough and prick the base all over with a fork.",
+            "Bake the tart base for 15 minutes, or until it is lightly golden and crisp.",
+            "Meanwhile, heat a little oil in a frying pan and cook the sliced red onion over a low heat for 10-15 minutes, or until it is soft and caramelised.",
+            "Arrange the sliced beetroot and red onion over the baked tart base.",
+            "In a jug, whisk together the eggs and milk and season with salt and pepper. Pour the mixture over the beetroot and red onion in the tart tin.",
+            "Crumble the goat cheese over the top of the filling.",
+            "Bake the tart for 25-30 minutes or until the filling is golden and set.",
+            "Allow to cool slightly before serving."
+        ]
     }
 ]
 

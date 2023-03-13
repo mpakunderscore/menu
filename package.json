@@ -54,6 +54,7 @@
         "dotenv": "^16.0.1",
         "express": "^4.18.1",
         "google-spreadsheet": "^3.3.0",
+        "openai": "^3.2.1",
         "path": "^0.12.7",
         "pg": "^8.7.1",
         "react": "^18.2.0",

@@ -33,7 +33,8 @@ const Food = (props) => {
 
             recipe['tags'] = listTags.find(item => item.recipe === recipe.name).tags
 
-            recipe['likes'] = 5
+            if (!recipe['likes'])
+                recipe['likes'] = 5
 
             if (recipe.instructions.length === 0 || typeof recipe.instructions[0] !== 'string') {
                 // console.error('RECIPE ERROR')

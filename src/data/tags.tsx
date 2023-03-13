@@ -526,5 +526,9 @@ export let listTags = [
     {
         "recipe": "Mac and Cheese",
         "tags": ["easy", "vegetarian"]
+    },
+    {
+        "recipe": "Beetroot and Goat Cheese Tart",
+        "tags": ["generated"]
     }
 ]
