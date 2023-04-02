@@ -2,9 +2,9 @@ let { Configuration, OpenAIApi } = require("openai")
 
 // https://platform.openai.com/docs/api-reference/chat
 
-let organisation = 'org-EIcBrDsXbg2uN1ZVXszkt4Wa'
 
-let key = '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'
+
+
 
 require('dotenv').config()
 
